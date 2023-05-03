@@ -15,3 +15,5 @@ A los cambios temporales les agrega un comentario para buscarlo en el historico
 Sube los cambios a la nube de Github
 ## git pull
 Actualiza los ficheros guardados en local
+## git checkout "rama"
+Sirve para cambiar de rama
