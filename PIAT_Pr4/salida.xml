@@ -399,6 +399,24 @@
 			</resource>
 			<resource id="https://datos.madrid.es/egob/catalogo/206717-0-agenda-eventos-bibliotecas.json">
 			<concept id="https://datos.madrid.es/egob/kos/actividades/ConferenciasColoquios"/>
+				<link> <![CDATA[http://www.madrid.es/sites/v/index.jsp?vgnextchannel=ca9671ee4a9eb410VgnVCM100000171f5a0aRCRD&vgnextoid=9f3de6347d008810VgnVCM1000001d4a900aRCRD]]> </link>
+				<title>18 ciervas</title>
+				<location>
+						<eventLocation>Biblioteca Pública Municipal Eugenio Trías. Casa de Fieras de El Retiro (Retiro)</eventLocation>
+						<address>
+								<area>https://datos.madrid.es/egob/kos/Provincia/Madrid/Municipio/Madrid/Distrito/Retiro/Barrio/LosJeronimos</area>
+								<locality>MADRID</locality>
+								<street>PASEO FERNÁN NÚÑEZ 24</street>
+						</address>
+						<timetable>
+							<start>2023-05-11 19:00:00.0</start>
+							<end>2023-05-11 23:59:00.0</end>
+						</timetable>
+						<georeference>40.4166091081099 -3.6795930368034804</georeference>
+				</location>
+			</resource>
+			<resource id="https://datos.madrid.es/egob/catalogo/206717-0-agenda-eventos-bibliotecas.json">
+			<concept id="https://datos.madrid.es/egob/kos/actividades/ConferenciasColoquios"/>
 				<link> <![CDATA[http://www.madrid.es/sites/v/index.jsp?vgnextchannel=ca9671ee4a9eb410VgnVCM100000171f5a0aRCRD&vgnextoid=37f9d842188c7810VgnVCM1000001d4a900aRCRD]]> </link>
 				<title>A vueltas con la sostenibilidad: nuevo lenguaje para viejas prácticas</title>
 				<location>
@@ -470,25 +488,6 @@
 						</timetable>
 						<georeference>40.44640229188281 -3.6117933204271098</georeference>
 				</location>
-			</resource>
-			<resource id="https://datos.madrid.es/egob/catalogo/206717-0-agenda-eventos-bibliotecas.json">
-			<concept id="https://datos.madrid.es/egob/kos/actividades/ConferenciasColoquios"/>
-				<link> <![CDATA[http://www.madrid.es/sites/v/index.jsp?vgnextchannel=ca9671ee4a9eb410VgnVCM100000171f5a0aRCRD&vgnextoid=06e9de7193375810VgnVCM2000001f4a900aRCRD]]> </link>
-				<title>Aula de Salud Bodyfulness y Mindfulness</title>
-				<location>
-						<eventLocation>Biblioteca Pública Municipal Ana María Matute (Carabanchel)</eventLocation>
-						<address>
-								<area>https://datos.madrid.es/egob/kos/Provincia/Madrid/Municipio/Madrid/Distrito/Carabanchel/Barrio/SanIsidro</area>
-								<locality>MADRID</locality>
-								<street>CALLE ISAAC ALBENIZ 1</street>
-						</address>
-						<timetable>
-							<start>2023-05-04 16:30:00.0</start>
-							<end>2023-05-25 23:59:00.0</end>
-						</timetable>
-						<georeference>40.39786734087938 -3.720088245008897</georeference>
-				</location>
-				<description>Los jueves a las 17:00 horas</description>
 			</resource>
 			<resource id="https://datos.madrid.es/egob/catalogo/300261-0-agenda-proximas-carreras.json">
 			<concept id="https://datos.madrid.es/egob/kos/actividades/ActividadesDeportivas/CarrerasMaratones"/>

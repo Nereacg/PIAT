@@ -162,7 +162,6 @@ public class P4_JSON {
 			 
 			//validXsd(args);
 			
-			getDatasetConcepts(manejadorXML.getConcepts(),manejadorXML.getDatasets());
 		} catch(SAXException | ParserConfigurationException | IOException e){
 			e.printStackTrace();
 		}
