@@ -1,6 +1,7 @@
 package piat.opendatasearch;
 
 import java.io.IOException;
+import java.util.ArrayList;
 import java.util.List;
 import javax.xml.xpath.XPathExpressionException;
 
@@ -25,10 +26,10 @@ public class XPATH_Evaluador{
 		// Realiza las 4 consultas XPath al documento XML de entrada que se indican en el enunciado en el apartado "3.2 Búsqueda de información y generación del documento de resultados."
 		// Cada consulta devolverá una información que se añadirá a la colección List <Propiedad>, que es la que devuelve este método
 		// Una consulta puede devolver una propiedad o varias
+		List<Propiedad> list = new ArrayList<>();
 
 
-
-		
+		return list;
 	}
 	/**
 	 * Esta clase interna define una propiedad equivalente a "nombre":"valor" en JSON

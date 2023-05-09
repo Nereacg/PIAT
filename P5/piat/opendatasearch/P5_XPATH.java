@@ -65,7 +65,8 @@ public class P5_XPATH {
 			//Invocar al método getDatasets() del objeto ManejadorXML para obtener un mapa con los datasets de la categoría buscada
 			//Crear el fichero de salida con el nombre recibido en el cuarto argumento de main()
 			Map<String, List<Map<String, String>>> mapa = getDatasetConcepts(manejadorXML.getConcepts(), manejadorXML.getDatasets());
-			String contenido = GenerarJSON.generar(null, null);;
+			String contenido = GenerarXML.generar(manejadorXML.getConcepts(), manejadorXML.getDatasets(), args, mapa);
+			GenerarJSON.generar(contenido, null);
 			File salida = new File(args[3]);
 			salida.delete();
 			//Escribir en el fichero de salida el contenido del List<String> obtenido en el paso anterior
