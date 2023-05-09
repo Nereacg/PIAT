@@ -158,7 +158,7 @@ public class P4_JSON {
 			Schema schema = schemaFactory.newSchema(schemaFile);
 			Validator validator = schema.newValidator();
 			File xmlFile = new File(args[3]);
-			//validator.validate(new StreamSource(xmlFile));
+			validator.validate(new StreamSource(xmlFile));
 			 
 			//validXsd(args);
 			

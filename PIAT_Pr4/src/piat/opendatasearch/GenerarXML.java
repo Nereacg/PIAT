@@ -132,7 +132,7 @@ import java.util.Map.Entry;
 						//salidaXML.append (pEnd.replace("#valor#", mapaValor.get("dtend")));
 					salidaXML.append("\n\t\t\t\t\t\t</timetable>" );
 					String [] string1 = {"latitude", "longitude"};
-					valorValido(pStreet, salidaXML, mapaValor, string1);	
+					valorValido(pGeoreference, salidaXML, mapaValor, string1);	
 					//salidaXML.append (pGeoreference.replace("#valor#", mapaValor.get("latitude") + " " + mapaValor.get("longitude")));
 					salidaXML.append("\n\t\t\t\t</location>" );
 					string[0] = "description";
@@ -147,8 +147,7 @@ import java.util.Map.Entry;
 		}
 		
 		private static void valorValido(String patron, StringBuilder salidaXML, Map<String, String> map, String [] key){
-			int aa=key.length;
-			System.out.println(aa);
+		
 			if(key.length == 2) {
 				if(!map.get(key[0]).equals("") && !map.get(key[1]).equals(""))
 					salidaXML.append (patron.replace("#valor#", map.get(key[0]) + " " + map.get(key[1])));

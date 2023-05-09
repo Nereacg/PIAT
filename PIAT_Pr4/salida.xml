@@ -154,7 +154,7 @@
 							<start>2023-05-27 18:30:00.0</start>
 							<end>2023-05-27 23:59:00.0</end>
 						</timetable>
-								<street>40.51635495615339 -3.685946562681175</street>
+						<georeference>40.51635495615339 -3.685946562681175</georeference>
 				</location>
 				<description>Teatro, a cargo del Grupo de Teatro El Gato Bohemio Autor Francisco José Ploú</description>
 			</resource>
@@ -173,7 +173,7 @@
 							<start>2023-05-05 10:00:00.0</start>
 							<end>2023-05-30 23:59:00.0</end>
 						</timetable>
-								<street>40.435209393826675 -3.7188765163188293</street>
+						<georeference>40.435209393826675 -3.7188765163188293</georeference>
 				</location>
 			</resource>
 			<resource id="https://datos.madrid.es/egob/catalogo/206974-0-agenda-eventos-culturales-100.json">
@@ -191,8 +191,27 @@
 							<start>2023-05-05 00:00:00.0</start>
 							<end>2023-05-21 23:59:00.0</end>
 						</timetable>
-								<street>40.3957812018463 -3.6670346724676173</street>
+						<georeference>40.3957812018463 -3.6670346724676173</georeference>
 				</location>
+			</resource>
+			<resource id="https://datos.madrid.es/egob/catalogo/206974-0-agenda-eventos-culturales-100.json">
+			<concept id="https://datos.madrid.es/egob/kos/actividades/Fiestas"/>
+				<link> <![CDATA[http://www.madrid.es/sites/v/index.jsp?vgnextchannel=ca9671ee4a9eb410VgnVCM100000171f5a0aRCRD&vgnextoid=f2bafb7315ff7810VgnVCM2000001f4a900aRCRD]]> </link>
+				<title>7º Festival Internacional de Folclore de Latina. Folkfestival 'Ara de Madrid'</title>
+				<location>
+						<eventLocation>Auditorio al aire libre. Parque Aluche</eventLocation>
+						<address>
+								<area>https://datos.madrid.es/egob/kos/Provincia/Madrid/Municipio/Madrid/Distrito/Latina/Barrio/Aluche</area>
+								<locality>MADRID</locality>
+								<street>CALLE ILLESCAS 149</street>
+						</address>
+						<timetable>
+							<start>2023-06-04 19:30:00.0</start>
+							<end>2023-06-04 23:59:00.0</end>
+						</timetable>
+						<georeference>40.392680212409495 -3.7593572957930554</georeference>
+				</location>
+				<description>Con la participación de los grupos:  Grupo de baile 'Chervona Kalyna' (Ucrania) bajo la dirección de Anatoly y Nelva Halchynskyy. Grupo folclórico 'Aires de Murcia' (Murcia), bajo la dirección de María del Mar Diaz. Ballet 'Ara de Madrid', bajo la dirección de Carmina Villar.</description>
 			</resource>
 			<resource id="https://datos.madrid.es/egob/catalogo/206974-0-agenda-eventos-culturales-100.json">
 			<concept id="https://datos.madrid.es/egob/kos/actividades/ProgramacionDestacadaAgendaCultura"/>
@@ -209,27 +228,8 @@
 							<start>2023-05-12 00:00:00.0</start>
 							<end>2023-05-14 23:59:00.0</end>
 						</timetable>
-								<street>40.39130985242181 -3.6958028442054074</street>
+						<georeference>40.39130985242181 -3.6958028442054074</georeference>
 				</location>
-			</resource>
-			<resource id="https://datos.madrid.es/egob/catalogo/206974-0-agenda-eventos-culturales-100.json">
-			<concept id="https://datos.madrid.es/egob/kos/actividades/ConferenciasColoquios"/>
-				<link> <![CDATA[http://www.madrid.es/sites/v/index.jsp?vgnextchannel=ca9671ee4a9eb410VgnVCM100000171f5a0aRCRD&vgnextoid=37f9d842188c7810VgnVCM1000001d4a900aRCRD]]> </link>
-				<title>A vueltas con la sostenibilidad: nuevo lenguaje para viejas prácticas</title>
-				<location>
-						<eventLocation>Biblioteca Pública Municipal Dámaso Alonso (Chamartín)</eventLocation>
-						<address>
-								<area>https://datos.madrid.es/egob/kos/Provincia/Madrid/Municipio/Madrid/Distrito/Chamartin/Barrio/Castilla</area>
-								<locality>MADRID</locality>
-								<street>CALLE MANUEL FERRERO 1</street>
-						</address>
-						<timetable>
-							<start>2023-05-25 18:00:00.0</start>
-							<end>2023-05-25 23:59:00.0</end>
-						</timetable>
-								<street>40.467453379213175 -3.6846112774442705</street>
-				</location>
-				<description>Cuarta charla del Ciclo Medio ambiente y territorio: un punto de vista no convencional.     Sostenibilidad es un término cuyo significado depende de la gran diversidad de quienes lo utilizan y de elementos a los que se aplica.    El concepto tiene su origen en la 'cuestión' ambiental, pero incorpora otras tres dimensiones: la sostenibilidad social, la económica y la territorial, esta última asociada al marco físico en el que se desarrolla la vida de los ciudadanos. Se trata de un término que actualmente ha llegado al mundo de los negocios, y con mucho éxito, porque la ambigüedad de su significado no compromete a nada, lo que lleva a un uso banal, aplicado a cualquier cosa.    Esta charla tratará de clarificar el concepto cuya confusión propicia el uso abusivo del término que lo nombra.</description>
 			</resource>
 			<resource id="https://datos.madrid.es/egob/catalogo/212504-0-agenda-actividades-deportes.json">
 			<concept id="https://datos.madrid.es/egob/kos/actividades/ActividadesDeportivas/CarrerasMaratones"/>
@@ -272,7 +272,7 @@
 							<start>2023-04-01 10:00:00.0</start>
 							<end>2023-06-30 23:59:00.0</end>
 						</timetable>
-								<street>40.41789950036311 -3.7309390858931137</street>
+						<georeference>40.41789950036311 -3.7309390858931137</georeference>
 				</location>
 			</resource>
 			<resource id="https://datos.madrid.es/egob/catalogo/212504-0-agenda-actividades-deportes.json">
@@ -303,7 +303,7 @@
 							<start>2022-09-01 00:00:00.0</start>
 							<end>2023-07-31 23:59:00.0</end>
 						</timetable>
-								<street>40.45999848510341 -3.6148888706303586</street>
+						<georeference>40.45999848510341 -3.6148888706303586</georeference>
 				</location>
 			</resource>
 			<resource id="https://datos.madrid.es/egob/catalogo/300107-0-agenda-actividades-eventos.json">
@@ -321,7 +321,7 @@
 							<start>2023-05-27 18:30:00.0</start>
 							<end>2023-05-27 23:59:00.0</end>
 						</timetable>
-								<street>40.51635495615339 -3.685946562681175</street>
+						<georeference>40.51635495615339 -3.685946562681175</georeference>
 				</location>
 				<description>Teatro, a cargo del Grupo de Teatro El Gato Bohemio Autor Francisco José Ploú</description>
 			</resource>
@@ -340,7 +340,7 @@
 							<start>2023-01-09 18:00:00.0</start>
 							<end>2023-06-26 23:59:00.0</end>
 						</timetable>
-								<street>40.395326406887946 -3.721622686264932</street>
+						<georeference>40.395326406887946 -3.721622686264932</georeference>
 				</location>
 			</resource>
 			<resource id="https://datos.madrid.es/egob/catalogo/300107-0-agenda-actividades-eventos.json">
@@ -358,7 +358,7 @@
 							<start>2023-05-05 10:00:00.0</start>
 							<end>2023-05-30 23:59:00.0</end>
 						</timetable>
-								<street>40.435209393826675 -3.7188765163188293</street>
+						<georeference>40.435209393826675 -3.7188765163188293</georeference>
 				</location>
 			</resource>
 			<resource id="https://datos.madrid.es/egob/catalogo/300107-0-agenda-actividades-eventos.json">
@@ -376,7 +376,7 @@
 							<start>2023-05-05 00:00:00.0</start>
 							<end>2023-05-21 23:59:00.0</end>
 						</timetable>
-								<street>40.3957812018463 -3.6670346724676173</street>
+						<georeference>40.3957812018463 -3.6670346724676173</georeference>
 				</location>
 			</resource>
 			<resource id="https://datos.madrid.es/egob/catalogo/300107-0-agenda-actividades-eventos.json">
@@ -394,7 +394,7 @@
 							<start>2023-05-12 00:00:00.0</start>
 							<end>2023-05-14 23:59:00.0</end>
 						</timetable>
-								<street>40.39130985242181 -3.6958028442054074</street>
+						<georeference>40.39130985242181 -3.6958028442054074</georeference>
 				</location>
 			</resource>
 			<resource id="https://datos.madrid.es/egob/catalogo/206717-0-agenda-eventos-bibliotecas.json">
@@ -412,7 +412,7 @@
 							<start>2023-05-25 18:00:00.0</start>
 							<end>2023-05-25 23:59:00.0</end>
 						</timetable>
-								<street>40.467453379213175 -3.6846112774442705</street>
+						<georeference>40.467453379213175 -3.6846112774442705</georeference>
 				</location>
 				<description>Cuarta charla del Ciclo Medio ambiente y territorio: un punto de vista no convencional.     Sostenibilidad es un término cuyo significado depende de la gran diversidad de quienes lo utilizan y de elementos a los que se aplica.    El concepto tiene su origen en la 'cuestión' ambiental, pero incorpora otras tres dimensiones: la sostenibilidad social, la económica y la territorial, esta última asociada al marco físico en el que se desarrolla la vida de los ciudadanos. Se trata de un término que actualmente ha llegado al mundo de los negocios, y con mucho éxito, porque la ambigüedad de su significado no compromete a nada, lo que lleva a un uso banal, aplicado a cualquier cosa.    Esta charla tratará de clarificar el concepto cuya confusión propicia el uso abusivo del término que lo nombra.</description>
 			</resource>
@@ -431,7 +431,7 @@
 							<start>2023-05-24 18:00:00.0</start>
 							<end>2023-05-24 23:59:00.0</end>
 						</timetable>
-								<street>40.4166091081099 -3.6795930368034804</street>
+						<georeference>40.4166091081099 -3.6795930368034804</georeference>
 				</location>
 				<description>Charla impartida por Raquel Mateos, investigadora del ICTAN-CSIC. En esta actividad se presentarán los beneficios avalados por la ciencia del aceite de oliva conocido como 'oro líquido'. Se repasarán los diferentes tipos de aceites disponibles comercialmente y sus diferencias nutricionales y sensoriales.  Acceso libre hasta completar aforo.</description>
 			</resource>
@@ -450,7 +450,7 @@
 							<start>2023-05-14 11:00:00.0</start>
 							<end>2023-05-14 23:59:00.0</end>
 						</timetable>
-								<street>40.41410290844665 -3.7098591212735883</street>
+						<georeference>40.41410290844665 -3.7098591212735883</georeference>
 				</location>
 			</resource>
 			<resource id="https://datos.madrid.es/egob/catalogo/206717-0-agenda-eventos-bibliotecas.json">
@@ -468,7 +468,7 @@
 							<start>2022-09-21 00:00:00.0</start>
 							<end>2023-06-28 23:59:00.0</end>
 						</timetable>
-								<street>40.44640229188281 -3.6117933204271098</street>
+						<georeference>40.44640229188281 -3.6117933204271098</georeference>
 				</location>
 			</resource>
 			<resource id="https://datos.madrid.es/egob/catalogo/206717-0-agenda-eventos-bibliotecas.json">
@@ -486,7 +486,7 @@
 							<start>2023-05-04 16:30:00.0</start>
 							<end>2023-05-25 23:59:00.0</end>
 						</timetable>
-								<street>40.39786734087938 -3.720088245008897</street>
+						<georeference>40.39786734087938 -3.720088245008897</georeference>
 				</location>
 				<description>Los jueves a las 17:00 horas</description>
 			</resource>
