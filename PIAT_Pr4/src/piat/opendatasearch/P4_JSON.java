@@ -69,12 +69,29 @@ public class P4_JSON {
 			File salida = new File(args[3]);
 			salida.delete();
 			//Escribir en el fichero de salida el contenido del List<String> obtenido en el paso anterior
+<<<<<<< HEAD
 			//FileWriter writer = new FileWriter(salida, true);
 			//BufferedWriter para escribir en UTF-8 y evitar problemas con caracteres especiales
 			BufferedWriter bufferedWriter = new BufferedWriter(new OutputStreamWriter(new FileOutputStream(salida), StandardCharsets.UTF_8));
 			bufferedWriter.write(contenido);
 			bufferedWriter.close();
 			validXsd(args);
+=======
+			FileWriter writer = new FileWriter(salida, true);
+			writer.write(contenido);
+			writer.close();
+			
+			//Validar el fichero generado con el esquema recibido en el tercer argumento de main()
+			SchemaFactory schemaFactory = SchemaFactory.newInstance(XMLConstants.W3C_XML_SCHEMA_NS_URI);
+			File schemaFile = new File(args[2]);
+			Schema schema = schemaFactory.newSchema(schemaFile);
+			Validator validator = schema.newValidator();
+			File xmlFile = new File(args[3]);
+			validator.validate(new StreamSource(xmlFile));
+			 
+			//validXsd(args);
+			
+>>>>>>> origin/main
 		} catch(SAXException | ParserConfigurationException | IOException e){
 			e.printStackTrace();
 		}
@@ -124,6 +141,7 @@ public class P4_JSON {
 				throw new IllegalArgumentException("Argumento incorrecto: " + args[i]);
 			}
 		}
+<<<<<<< HEAD
 		try {
 			validArg1_2(args[1]);
 			validArg1_2(args[2]);
@@ -208,3 +226,9 @@ public class P4_JSON {
 		return mapa;
 	}
 }
+=======
+
+	
+	
+	}
+>>>>>>> origin/main
