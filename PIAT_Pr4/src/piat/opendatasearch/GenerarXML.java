@@ -18,15 +18,15 @@ import java.util.Map.Entry;
  */	
 	
 	public class GenerarXML {
-		private static final String pConcept		= "\n\t\t\t<concept>#ID#</concept>" ;
-		private static final String pDataset		= "\n\t\t\t<dataset id=\"#ID#\">";
+		private static final String pConcept		= "\n\t\t\t<concept>#valor#</concept>" ;
+		private static final String pDataset		= "\n\t\t\t<dataset id=\"#valor#\">";
 		private static final String pTitle			= "\n\t\t\t\t<title>#valor#</title>";
 		private static final String pDescription	= "\n\t\t\t\t<description>#valor#</description>";
 		private static final String pTheme			= "\n\t\t\t\t<theme>#valor#</theme>";
 
 		/* Practica 4 */
-		private static final String pResource		= "\n\t\t\t<resource id=\"#ID#\">";
-		private static final String pConcept2		= "\n\t\t\t<concept id=\"#ID#\"/>" ;
+		private static final String pResource		= "\n\t\t\t<resource id=\"#valor#\">";
+		private static final String pConcept2		= "\n\t\t\t<concept id=\"#valor#\"/>" ;
 		
 		private static final String pLink= "\n\t\t\t\t<link> <![CDATA[#valor#]]> </link>" ;
 		private static final String pEventLocation= "\n\t\t\t\t\t\t<eventLocation>#valor#</eventLocation>";
@@ -64,7 +64,7 @@ import java.util.Map.Entry;
 
 			salidaXML.append("\n\t\t<concepts>");
 			for (String aux : lConcepts) {
-				salidaXML.append(pConcept.replace("#ID#", aux));
+				salidaXML.append(pConcept.replace("#valor#", aux));
 			}
 			salidaXML.append("\n\t\t</concepts>");
 			if(hDatasets.size() != 0){
@@ -73,7 +73,7 @@ import java.util.Map.Entry;
 				for (Map.Entry<String, Map<String, String>> entry : hDatasets.entrySet()) {
 					Map<String, String> mapaValor = entry.getValue();
 					if (mapaValor.containsKey("title") && mapaValor.containsKey("description") && mapaValor.containsKey("theme")) {
-						salidaXML.append(pDataset.replace("#ID#", entry.getKey()));
+						salidaXML.append(pDataset.replace("#valor#", entry.getKey()));
 						salidaXML.append(pTitle.replace("#valor#", mapaValor.get("title")));
 						salidaXML.append(pDescription.replace("#valor#", mapaValor.get("description")));
 						salidaXML.append(pTheme.replace("#valor#", mapaValor.get("theme")));
@@ -97,28 +97,48 @@ import java.util.Map.Entry;
 			for (Map.Entry<String, List<Map<String, String>>> entry : mapa.entrySet()) {
 				List<Map<String, String>> lista = entry.getValue();
 				for (Map<String, String> mapaValor : lista) {
-						
-					salidaXML.append (pResource.replace("#ID#", entry.getKey()));
-					salidaXML.append (pConcept2.replace("#ID#", mapaValor.get("@type")));
-					salidaXML.append (pLink.replace("#valor#", mapaValor.get("link")));
-					salidaXML.append (pTitle.replace("#valor#", mapaValor.get("title")));
+					salidaXML.append (pResource.replace("#valor#", entry.getKey()));
+					String [] string = {"@type"};
+					valorValido(pConcept2, salidaXML, mapaValor, string);	
+					//salidaXML.append (pConcept2.replace("#valor#", mapaValor.get("@type")));
+					string[0] = "link";
+					valorValido(pLink, salidaXML, mapaValor, string);	
+					//salidaXML.append (pLink.replace("#valor#", mapaValor.get("link")));
+					string[0] = "title";
+					valorValido(pTitle, salidaXML, mapaValor, string);	
+					//salidaXML.append (pTitle.replace("#valor#", mapaValor.get("title")));
 					salidaXML.append("\n\t\t\t\t<location>" );
-					salidaXML.append (pEventLocation.replace("#valor#", mapaValor.get("eventLocation")));
+					string[0] = "eventLocation";
+					valorValido(pEventLocation, salidaXML, mapaValor, string);	
+					//salidaXML.append (pEventLocation.replace("#valor#", mapaValor.get("eventLocation")));
 					salidaXML.append("\n\t\t\t\t\t\t<address>" );
-					salidaXML.append (pArea.replace("#valor#", mapaValor.get("area")));
-					salidaXML.append (pLocality.replace("#valor#", mapaValor.get("locality")));
-					salidaXML.append (pStreet.replace("#valor#", mapaValor.get("street-address")));
+					string[0] = "area";
+					valorValido(pArea, salidaXML, mapaValor, string);	
+					//salidaXML.append (pArea.replace("#valor#", mapaValor.get("area")));
+					string[0] = "locality";
+					valorValido(pLocality, salidaXML, mapaValor, string);	
+					//salidaXML.append (pLocality.replace("#valor#", mapaValor.get("locality")));
+					string[0] = "street-address";
+					valorValido(pStreet, salidaXML, mapaValor, string);	
+					//salidaXML.append (pStreet.replace("#valor#", mapaValor.get("street-address")));
 					salidaXML.append("\n\t\t\t\t\t\t</address>" );
 					salidaXML.append("\n\t\t\t\t\t\t<timetable>" );
-					salidaXML.append (pStart.replace("#valor#", mapaValor.get("dtstart")));
-					salidaXML.append (pEnd.replace("#valor#", mapaValor.get("dtend")));
+					string[0] = "dstart";
+					valorValido(pStart, salidaXML, mapaValor, string);	
+					//salidaXML.append (pStart.replace("#valor#", mapaValor.get("dtstart")));
+					string[0] = "dtend";
+					valorValido(pEnd, salidaXML, mapaValor, string);
+					//if(!mapaValor.get("dtend").equals(""))
+						//salidaXML.append (pEnd.replace("#valor#", mapaValor.get("dtend")));
 					salidaXML.append("\n\t\t\t\t\t\t</timetable>" );
-					salidaXML.append (pGeoreference.replace("#valor#", mapaValor.get("latitude") + " " + mapaValor.get("longitude")));
+					String [] string1 = {"latitude", "longitud"};
+					valorValido(pStreet, salidaXML, mapaValor, string1);	
+					//salidaXML.append (pGeoreference.replace("#valor#", mapaValor.get("latitude") + " " + mapaValor.get("longitude")));
 					salidaXML.append("\n\t\t\t\t</location>" );
-					salidaXML.append (pDescription.replace("#valor#", mapaValor.get("description")));
-					
+					string[0] = "description";
+					valorValido(pDescription, salidaXML, mapaValor, string);	
+					//salidaXML.append (pDescription.replace("#valor#", mapaValor.get("description")));
 					salidaXML.append("\n\t\t\t</resource>");
-					
 				}
 				
 			}
@@ -126,6 +146,25 @@ import java.util.Map.Entry;
 			salidaXML.append("\n\t\t</resources>");
 		}
 		
-
+		private static void valorValido(String patron, StringBuilder salidaXML, Map<String, String> map, String [] key){
+			if(key.length == 2)
+				if(!map.get(key[0]).equals("") && !map.get(key[1]).equals(""))
+					salidaXML.append (patron.replace("#valor#", map.get(key[0]) + " " + map.get(key[1])));
+			else if(key.length == 1)
+				if(!map.get(key[0]).equals(""))
+					salidaXML.append (patron.replace("#valor#", map.get(key[0])));
+			/*switch(key.length) {
+			case 2:
+				if(!map.get(key[0]).equals(null) && !map.get(key[1]).equals(null))
+					salidaXML.append (patron.replace("#valor#", map.get(key[0]) + " " + map.get(key[1])));
+				break;
+			/*case 1:
+				if(!map.get(key[0]).equals(null))
+					salidaXML.append (patron.replace("#valor#", map.get(key[0])));		
+				break;
+			default:
+				break;
+			}*/
+		}
 	}
 

@@ -158,7 +158,7 @@ public class P4_JSON {
 			Schema schema = schemaFactory.newSchema(schemaFile);
 			Validator validator = schema.newValidator();
 			File xmlFile = new File(args[3]);
-			validator.validate(new StreamSource(xmlFile));
+			//validator.validate(new StreamSource(xmlFile));
 			 
 			//validXsd(args);
 			
@@ -241,23 +241,7 @@ public class P4_JSON {
 
 			return bigMap;
 		}
-	
-	
-	
-	
-	
-	
-	
-	
-	private static void validXsd(String [] args) throws SAXException, IOException{
-		SchemaFactory schemaFactory = SchemaFactory.newInstance(XMLConstants.W3C_XML_SCHEMA_NS_URI);
-		File schemaFile = new File(args[2]);
-		Schema schema = schemaFactory.newSchema(schemaFile);
-		Validator validator = schema.newValidator();
-		File xmlFile = new File(args[3]);
-		validator.validate(new StreamSource(xmlFile));
-	}
-	
+
 	
 	
 	}

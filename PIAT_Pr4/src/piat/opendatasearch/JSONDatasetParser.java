@@ -203,9 +203,9 @@ public class JSONDatasetParser implements Runnable {
 						jsonReader.skipValue();
 			}
 		}
-		//	- Una vez procesadas todas las propiedades, ver si la clave @type tiene un valor igual a alguno de los concept de la lista lConcepts. Si es así
-		//	  guardar en un mapa Map<String,String> todos los valores de las variables temporales recogidas en el paso anterior y añadir este mapa al mapa graphs
-		if(lConcepts.contains(type) && graphs.size()<5) {//Si se han añadido 5 graph a la lista dejar de meterlos en el mapa
+		//	- Una vez procesadas todas las propiedades, ver si la clave @type tiene un valor igual a alguno de los concept de la lista lConcepts. Si es asï¿½
+		//	  guardar en un mapa Map<String,String> todos los valores de las variables temporales recogidas en el paso anterior y aï¿½adir este mapa al mapa graphs
+		if(lConcepts.contains(type) && graphs.size()<5 && !graphs.contains(mapaTemp)) {//Si se han aï¿½adido 5 graph a la lista dejar de meterlos en el mapa
 			mapaTemp.put("@id", id);
 			mapaTemp.put("@type", type);
 			mapaTemp.put("link", link);
