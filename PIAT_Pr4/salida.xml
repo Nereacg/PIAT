@@ -140,6 +140,24 @@
 		</datasets>
 		<resources>
 			<resource id="https://datos.madrid.es/egob/catalogo/206974-0-agenda-eventos-culturales-100.json">
+			<concept id="https://datos.madrid.es/egob/kos/actividades/ConferenciasColoquios"/>
+				<link> <![CDATA[http://www.madrid.es/sites/v/index.jsp?vgnextchannel=ca9671ee4a9eb410VgnVCM100000171f5a0aRCRD&vgnextoid=9f3de6347d008810VgnVCM1000001d4a900aRCRD]]> </link>
+				<title>18 ciervas</title>
+				<location>
+						<eventLocation>Biblioteca Pública Municipal Eugenio Trías. Casa de Fieras de El Retiro (Retiro)</eventLocation>
+						<address>
+								<area>https://datos.madrid.es/egob/kos/Provincia/Madrid/Municipio/Madrid/Distrito/Retiro/Barrio/LosJeronimos</area>
+								<locality>MADRID</locality>
+								<street>PASEO FERNÁN NÚÑEZ 24</street>
+						</address>
+						<timetable>
+							<start>2023-05-11 19:00:00.0</start>
+							<end>2023-05-11 23:59:00.0</end>
+						</timetable>
+						<georeference>40.4166091081099 -3.6795930368034804</georeference>
+				</location>
+			</resource>
+			<resource id="https://datos.madrid.es/egob/catalogo/206974-0-agenda-eventos-culturales-100.json">
 			<concept id="https://datos.madrid.es/egob/kos/actividades/TeatroPerformance"/>
 				<link> <![CDATA[http://www.madrid.es/sites/v/index.jsp?vgnextchannel=ca9671ee4a9eb410VgnVCM100000171f5a0aRCRD&vgnextoid=040b3444013b7810VgnVCM2000001f4a900aRCRD]]> </link>
 				<title>2041</title>
@@ -213,24 +231,6 @@
 				</location>
 				<description>Con la participación de los grupos:  Grupo de baile 'Chervona Kalyna' (Ucrania) bajo la dirección de Anatoly y Nelva Halchynskyy. Grupo folclórico 'Aires de Murcia' (Murcia), bajo la dirección de María del Mar Diaz. Ballet 'Ara de Madrid', bajo la dirección de Carmina Villar.</description>
 			</resource>
-			<resource id="https://datos.madrid.es/egob/catalogo/206974-0-agenda-eventos-culturales-100.json">
-			<concept id="https://datos.madrid.es/egob/kos/actividades/ProgramacionDestacadaAgendaCultura"/>
-				<link> <![CDATA[http://www.madrid.es/sites/v/index.jsp?vgnextchannel=ca9671ee4a9eb410VgnVCM100000171f5a0aRCRD&vgnextoid=36ee98cc92cb7810VgnVCM1000001d4a900aRCRD]]> </link>
-				<title>A los libros y a las mujeres canto</title>
-				<location>
-						<eventLocation>Cineteca Madrid</eventLocation>
-						<address>
-								<area>https://datos.madrid.es/egob/kos/Provincia/Madrid/Municipio/Madrid/Distrito/Arganzuela/Barrio/Chopera</area>
-								<locality>MADRID</locality>
-								<street>PLAZA LEGAZPI 8</street>
-						</address>
-						<timetable>
-							<start>2023-05-12 00:00:00.0</start>
-							<end>2023-05-14 23:59:00.0</end>
-						</timetable>
-						<georeference>40.39130985242181 -3.6958028442054074</georeference>
-				</location>
-			</resource>
 			<resource id="https://datos.madrid.es/egob/catalogo/212504-0-agenda-actividades-deportes.json">
 			<concept id="https://datos.madrid.es/egob/kos/actividades/ActividadesDeportivas/CarrerasMaratones"/>
 				<link> <![CDATA[http://www.madrid.es/sites/v/index.jsp?vgnextchannel=ca9671ee4a9eb410VgnVCM100000171f5a0aRCRD&vgnextoid=ea79971d5f807810VgnVCM1000001d4a900aRCRD]]> </link>
@@ -277,6 +277,19 @@
 			</resource>
 			<resource id="https://datos.madrid.es/egob/catalogo/212504-0-agenda-actividades-deportes.json">
 			<concept id="https://datos.madrid.es/egob/kos/actividades/ActividadesDeportivas"/>
+				<link> <![CDATA[http://www.madrid.es/sites/v/index.jsp?vgnextchannel=ca9671ee4a9eb410VgnVCM100000171f5a0aRCRD&vgnextoid=a21103b16dbf7810VgnVCM2000001f4a900aRCRD]]> </link>
+				<title>Corre por la Esclerosis Múltiple</title>
+				<location>
+						<address>
+						</address>
+						<timetable>
+							<start>2023-05-13 09:00:00.0</start>
+							<end>2023-05-13 23:59:00.0</end>
+						</timetable>
+				</location>
+			</resource>
+			<resource id="https://datos.madrid.es/egob/catalogo/212504-0-agenda-actividades-deportes.json">
+			<concept id="https://datos.madrid.es/egob/kos/actividades/ActividadesDeportivas"/>
 				<link> <![CDATA[http://www.madrid.es/sites/v/index.jsp?vgnextchannel=ca9671ee4a9eb410VgnVCM100000171f5a0aRCRD&vgnextoid=712a8daaa32d4710VgnVCM1000001d4a900aRCRD]]> </link>
 				<title>Correr por Madrid</title>
 				<location>
@@ -286,24 +299,6 @@
 							<start>2022-09-01 00:00:00.0</start>
 							<end>2023-06-30 23:59:00.0</end>
 						</timetable>
-				</location>
-			</resource>
-			<resource id="https://datos.madrid.es/egob/catalogo/212504-0-agenda-actividades-deportes.json">
-			<concept id="https://datos.madrid.es/egob/kos/actividades/ActividadesDeportivas"/>
-				<link> <![CDATA[http://www.madrid.es/sites/v/index.jsp?vgnextchannel=ca9671ee4a9eb410VgnVCM100000171f5a0aRCRD&vgnextoid=6a73b16daa0b2810VgnVCM1000001d4a900aRCRD]]> </link>
-				<title>Piragüismo por Madrid</title>
-				<location>
-						<eventLocation>Parque Juan Carlos I</eventLocation>
-						<address>
-								<area>https://datos.madrid.es/egob/kos/Provincia/Madrid/Municipio/Madrid 28042/Distrito/Barajas/Barrio/Corralejos</area>
-								<locality>MADRID 28042</locality>
-								<street>GLORIETA S.A.R. DON JUAN DE BORBON Y BATTEMBERG, 5 5</street>
-						</address>
-						<timetable>
-							<start>2022-09-01 00:00:00.0</start>
-							<end>2023-07-31 23:59:00.0</end>
-						</timetable>
-						<georeference>40.45999848510341 -3.6148888706303586</georeference>
 				</location>
 			</resource>
 			<resource id="https://datos.madrid.es/egob/catalogo/300107-0-agenda-actividades-eventos.json">
@@ -380,22 +375,23 @@
 				</location>
 			</resource>
 			<resource id="https://datos.madrid.es/egob/catalogo/300107-0-agenda-actividades-eventos.json">
-			<concept id="https://datos.madrid.es/egob/kos/actividades/ProgramacionDestacadaAgendaCultura"/>
-				<link> <![CDATA[http://www.madrid.es/sites/v/index.jsp?vgnextchannel=ca9671ee4a9eb410VgnVCM100000171f5a0aRCRD&vgnextoid=36ee98cc92cb7810VgnVCM1000001d4a900aRCRD]]> </link>
-				<title>A los libros y a las mujeres canto</title>
+			<concept id="https://datos.madrid.es/egob/kos/actividades/Fiestas"/>
+				<link> <![CDATA[http://www.madrid.es/sites/v/index.jsp?vgnextchannel=ca9671ee4a9eb410VgnVCM100000171f5a0aRCRD&vgnextoid=f2bafb7315ff7810VgnVCM2000001f4a900aRCRD]]> </link>
+				<title>7º Festival Internacional de Folclore de Latina. Folkfestival 'Ara de Madrid'</title>
 				<location>
-						<eventLocation>Cineteca Madrid</eventLocation>
+						<eventLocation>Auditorio al aire libre. Parque Aluche</eventLocation>
 						<address>
-								<area>https://datos.madrid.es/egob/kos/Provincia/Madrid/Municipio/Madrid/Distrito/Arganzuela/Barrio/Chopera</area>
+								<area>https://datos.madrid.es/egob/kos/Provincia/Madrid/Municipio/Madrid/Distrito/Latina/Barrio/Aluche</area>
 								<locality>MADRID</locality>
-								<street>PLAZA LEGAZPI 8</street>
+								<street>CALLE ILLESCAS 149</street>
 						</address>
 						<timetable>
-							<start>2023-05-12 00:00:00.0</start>
-							<end>2023-05-14 23:59:00.0</end>
+							<start>2023-06-04 19:30:00.0</start>
+							<end>2023-06-04 23:59:00.0</end>
 						</timetable>
-						<georeference>40.39130985242181 -3.6958028442054074</georeference>
+						<georeference>40.392680212409495 -3.7593572957930554</georeference>
 				</location>
+				<description>Con la participación de los grupos:  Grupo de baile 'Chervona Kalyna' (Ucrania) bajo la dirección de Anatoly y Nelva Halchynskyy. Grupo folclórico 'Aires de Murcia' (Murcia), bajo la dirección de María del Mar Diaz. Ballet 'Ara de Madrid', bajo la dirección de Carmina Villar.</description>
 			</resource>
 			<resource id="https://datos.madrid.es/egob/catalogo/206717-0-agenda-eventos-bibliotecas.json">
 			<concept id="https://datos.madrid.es/egob/kos/actividades/ConferenciasColoquios"/>
