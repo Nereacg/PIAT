@@ -8,9 +8,9 @@ import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
+import java.util.concurrent.ConcurrentHashMap;
 
-//Para quitar el error del .google se hace importando el jar y le das boton derecho y build path y add build path
-
+import com.google.gson.Gson;
 import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonToken;
 
@@ -24,7 +24,8 @@ public class JSONDatasetParser implements Runnable {
 	private String nombreHilo;
 	
 	
-	public JSONDatasetParser (String fichero, List<String> lConcepts, Map<String, List<Map<String,String>>> mDatasetConcepts) { 
+	public JSONDatasetParser (String fichero, List<String> lConcepts, 
+	ConcurrentHashMap<String, List<Map<String,String>>> mDatasetConcepts) { 
 		this.fichero=fichero;
 		this.lConcepts=lConcepts;
 		this.mDatasetConcepts=mDatasetConcepts;
@@ -43,27 +44,29 @@ public class JSONDatasetParser implements Runnable {
 	    	InputStreamReader inputStream = new InputStreamReader(new URL(fichero).openStream(), "UTF-8"); 
 			//TODO:
 			//	- Crear objeto JsonReader a partir de inputStream
-	    		JsonReader jsonReader = new JsonReader(inputStream);
-	    	//  - Consumir el primer "{" del fichero
-	    		jsonReader.beginObject();
+			//  - Consumir el primer "{" del fichero
 			//  - Procesar los elementos del fichero JSON, hasta el final de fichero o hasta que finProcesar=true
-	    		while(jsonReader.hasNext() && !finProcesar) {
-	    			String name=jsonReader.nextName();
-	    			//	Si se encuentra el objeto @graph, invocar a procesar_graph()
-	    				if(name.equals("@graph")) {
-	    					finProcesar= procesar_graph(jsonReader, graphs, lConcepts);
-	    				}else {
-	    					//Descartar el resto de objetos
-	    					jsonReader.skipValue(); // Si no es uno de los anteriores, no lo procesamos.
-	    				}
-	    		}
-	    
+			//		Si se encuentra el objeto @graph, invocar a procesar_graph()
+			//		Descartar el resto de objetos
 			//	- Si se ha llegado al fin del fichero, consumir el último "}" del fichero
-	    		jsonReader.endObject();
-				
-	    		//  - Cerrar el objeto JsonReader
-	    		jsonReader.close();
-	    		
+			//  - Cerrar el objeto JsonReader
+			JsonReader jsonReader = new JsonReader(inputStream);
+			jsonReader.setLenient(true);  // Para poder saltarse valores con skipValue()
+
+			// inicio del consumo de los evantos del fichero json
+
+			jsonReader.beginObject(); // Consumo el "{" de apertura del objeto
+			while (jsonReader.hasNext()){
+				//jsonReader.beginObject(); // Consumo el "{" de apertura del objeto
+					String name = jsonReader.nextName();
+					if (name.equals("@graph")){
+						finProcesar=procesar_graph(jsonReader, graphs, lConcepts);
+						if (finProcesar) break;
+					}
+					else jsonReader.skipValue();
+				}
+				//jsonReader.endObject(); // Consumo el "}" de cierre del objeto
+				jsonReader.close();
 			inputStream.close();
 		} catch (FileNotFoundException e) {
 			System.out.println(nombreHilo+"El fichero no existe. Ignorándolo");
@@ -82,30 +85,25 @@ public class JSONDatasetParser implements Runnable {
 		boolean finProcesar=false;
 		// TODO:
 		//	- Consumir el primer "[" del array @graph
-					jsonReader.beginArray();
 		//  - Procesar todos los objetos del array, hasta el final de fichero o hasta que finProcesar=true
-					while (jsonReader.hasNext()) {	
-					//  	- Consumir el primer "{" del objeto
-						jsonReader.beginObject();
+		//  	- Consumir el primer "{" del objeto
 		//  	- Procesar un objeto del array invocando al método procesar_un_graph()
-						procesar_un_graph(jsonReader, graphs, lConcepts);
 		//  	- Consumir el último "}" del objeto
-						jsonReader.endObject();
 		// 		- Ver si se han añadido 5 graph a la lista, para en ese caso poner la variable finProcesar a true
-						if(graphs.size()==5) {
-							finProcesar=true;
+		//	- Si se ha llegado al fin del array, consumir el último "]" del array
+		jsonReader.beginArray();
+		while (jsonReader.hasNext()){
+						jsonReader.beginObject();
+						procesar_un_graph(jsonReader, graphs, lConcepts);
+						jsonReader.endObject();
+						if (graphs.size() == 5){
+							finProcesar = true;
+							break;
 						}
 					}
-					
-					
-					
-						//	- Si se ha llegado al fin del array, consumir el último "]" del array
-					jsonReader.endArray();
-					
-	    return finProcesar;
-		
+					//jsonReader.endArray();
+					return finProcesar;
 	}
-
 
 	/*	procesar_un_graph()
 	 * 	Procesa un objeto del array @graph y lo añade a la lista graphs si en el objeto de nombre @type hay un valor que se corresponde con uno de la lista lConcepts
@@ -114,80 +112,74 @@ public class JSONDatasetParser implements Runnable {
 	private void procesar_un_graph(JsonReader jsonReader, List<Map<String, String>> graphs, List<String> lConcepts) throws IOException {
 		// TODO:
 		//	- Procesar todas las propiedades de un objeto del array @graph, guardándolas en variables temporales
-		String id,type,title,description,dtstart,dtend,link,eventLocation,area, idd, locality, street,latitude,longitude;
-		id=type=title=dtstart=dtend=link=eventLocation=area=idd=locality=street=latitude=longitude=description=""; // Es necesario inicializarlos a nada por si no existen esas propiedades en el objeto para que tengan ese valor inicial
-		
-		HashMap<String, String> mapaTemp = new HashMap<String, String>();
-
-		while (jsonReader.hasNext()) {
-			mapaTemp = new HashMap<String, String>();
-			switch (jsonReader.nextName()) {				
-				case "@id":	
-					id=jsonReader.nextString();
+		//	- Una vez procesadas todas las propiedades, ver si la clave @type tiene un valor igual a alguno de los concept de la lista lConcepts. Si es así
+		//	  guardar en un mapa Map<String,String> todos los valores de las variables temporales recogidas en el paso anterior y añadir este mapa al mapa graphs
+		Map<String, String> map = new HashMap<String, String>();
+		while (jsonReader.hasNext()){
+			switch(jsonReader.nextName()){
+				case "@type":
+					String type = jsonReader.nextString();
+					if (lConcepts.contains(type)){
+						map.put("@type", type);
+					}
 					break;
-				case "@type":	
-					type=jsonReader.nextString();
+				case "@id":
+					map.put("@id", jsonReader.nextString());
 					break;
-				case "link":	
-					link=jsonReader.nextString();
+				case "link":
+					map.put("link", jsonReader.nextString());
 					break;
-				case "title":	
-					title=jsonReader.nextString();
+				case "title":
+					map.put("title", jsonReader.nextString());
 					break;
-				case "event-location":	
-					eventLocation=jsonReader.nextString();
+				case "event-location":
+					map.put("eventLocation", jsonReader.nextString());
 					break;
-				case "address":	//dentro de esta propiedad hay que buscar el objeto area y extraer el id
-
+				case "address":
 					jsonReader.beginObject();
-					while (jsonReader.hasNext()) {		// Se recorren todas las propiedades del objeto 
-						switch (jsonReader.nextName()) {				// Se procesan las propiedades que interean
-						
-						case "area":
+					while(jsonReader.hasNext()){
+						switch(jsonReader.nextName()){
+							case "area":
 							jsonReader.beginObject();
 							while (jsonReader.hasNext()) {
 								switch (jsonReader.nextName()) {				// Se procesan las propiedades que interean
 								
 								case "@id":	
-									idd=jsonReader.nextString();
+									map.put("area", jsonReader.nextString());
 									break;
 								case "locality":	
-									 locality=jsonReader.nextString();
+									 map.put("locality",jsonReader.nextString());
 										break;
 								case "street-address":
-									 street=jsonReader.nextString();
+									 map.put("street-address",jsonReader.nextString());
 									break;
-									default:	// Si no es uno de los anteriores, no lo procesamos
-											jsonReader.skipValue();
+								default:	
+									jsonReader.skipValue();
 								}
 							}
 							jsonReader.endObject();
-							
-							break;						
-						default:	
+							break;		
+						default:
 							jsonReader.skipValue();
-					}
-					
+						}
 					}
 					jsonReader.endObject();
 					break;
-					
-				case "dtstart":	
-					dtstart=jsonReader.nextString();
+				case "dtstart":
+					map.put("dtstart", jsonReader.nextString());
 					break;
-				case "dtend":		
-					dtend=jsonReader.nextString();
+				case "dtend":
+					map.put("dtend", jsonReader.nextString());
 					break;
-					
-				case "location":	
+				case "location":
 					jsonReader.beginObject();
 					while (jsonReader.hasNext()) {	
 						switch (jsonReader.nextName()) {
 						case "latitude":
-							latitude=jsonReader.nextString();
+						map.put("latitude",jsonReader.nextString());
 							break;
 						case "longitude":
-							longitude=jsonReader.nextString();
+							map.put("longitude",jsonReader.nextString());
 							break;
 						default:	
 							jsonReader.skipValue();
@@ -195,36 +187,15 @@ public class JSONDatasetParser implements Runnable {
 					}
 					jsonReader.endObject();
 					break;
-				case "description":	
-					description=jsonReader.nextString();
+				case "description":
+					map.put("description", jsonReader.nextString());
 					break;
-						
-				default:	
-						jsonReader.skipValue();
+				default:
+					jsonReader.skipValue();
+				}
 			}
-		}
-		//	- Una vez procesadas todas las propiedades, ver si la clave @type tiene un valor igual a alguno de los concept de la lista lConcepts. Si es as�
-		//	  guardar en un mapa Map<String,String> todos los valores de las variables temporales recogidas en el paso anterior y a�adir este mapa al mapa graphs
-		if(lConcepts.contains(type) && graphs.size()<5 && !graphs.contains(mapaTemp)) {//Si se han a�adido 5 graph a la lista dejar de meterlos en el mapa
-			mapaTemp.put("@id", id);
-			mapaTemp.put("@type", type);
-			mapaTemp.put("link", link);
-			mapaTemp.put("title", title);
-			mapaTemp.put("dtstart", dtstart);
-			mapaTemp.put("dtend", dtend);
-			mapaTemp.put("eventLocation", eventLocation);
-			mapaTemp.put("area", idd);
-			mapaTemp.put("locality", locality);
-			mapaTemp.put("street-address", street);
-			mapaTemp.put("latitude", latitude);
-			mapaTemp.put("longitude", longitude);
-			mapaTemp.put("description", description);
-
-			graphs.add(mapaTemp);
-			
+		if (lConcepts.contains(map.get("@type")) && !graphs.contains(map)){
+			graphs.add(map);
 		}
 	}
-	
-	
 }
-

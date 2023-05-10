@@ -24,6 +24,7 @@ import javax.xml.transform.stream.StreamSource;
 import javax.xml.validation.Schema;
 import javax.xml.validation.SchemaFactory;
 import javax.xml.validation.Validator;
+import javax.xml.xpath.XPathExpressionException;
 
 import org.xml.sax.SAXException;
 
@@ -43,7 +44,7 @@ public class P5_XPATH {
 	public static void main(String[] args) throws InterruptedException {
 		
 		// Verificar nº de argumentos correcto
-		if (args.length!=4){
+		if (args.length!=5){
 			String mensaje="ERROR: Argumentos incorrectos.";
 			if (args.length>0)
 				mensaje+=" He recibido estos argumentos: "+ Arrays.asList(args).toString()+"\n";
@@ -66,7 +67,6 @@ public class P5_XPATH {
 			//Crear el fichero de salida con el nombre recibido en el cuarto argumento de main()
 			Map<String, List<Map<String, String>>> mapa = getDatasetConcepts(manejadorXML.getConcepts(), manejadorXML.getDatasets());
 			String contenido = GenerarXML.generar(manejadorXML.getConcepts(), manejadorXML.getDatasets(), args, mapa);
-			GenerarJSON.generar(contenido, null);
 			File salida = new File(args[3]);
 			salida.delete();
 			//Escribir en el fichero de salida el contenido del List<String> obtenido en el paso anterior
@@ -76,10 +76,12 @@ public class P5_XPATH {
 			bufferedWriter.write(contenido);
 			bufferedWriter.close();
 			validXsd(args);
-		} catch(SAXException | ParserConfigurationException | IOException e){
+			//Practica 5 - Generar el fichero JSON
+			GenerarJSON.generar(contenido, XPATH_Evaluador.evaluar(args[4]));
+		} catch(SAXException | ParserConfigurationException | IOException
+				| XPathExpressionException e){
 			e.printStackTrace();
 		}
-
 		System.exit(0);
 	}
 	
@@ -118,7 +120,8 @@ public class P5_XPATH {
 		String regex[] = {"^[0-9]{3,4}(-[0-9A-Z]{3,8})*$",
 					"(.*xml)$",
 					"(.*xsd)$",
-					"(.*xml)$"};
+					"(.*xml)$",
+					"(.*json)$"};
 		for (int i = 0; i < args.length; i++) {
 			if (!args[i].matches(regex[i])) {
 				// Código para manejar el caso en que args[i] no coincide con regex[j]
@@ -129,6 +132,7 @@ public class P5_XPATH {
 			validArg1_2(args[1]);
 			validArg1_2(args[2]);
 			validArg3(args[3]);
+			validArg4(args[4]);
 		} catch (IOException e) {
 			e.printStackTrace();
 		}
@@ -138,7 +142,7 @@ public class P5_XPATH {
 		if(new File(arg).canRead())
 			System.out.println("Se pude leer el fichero "+arg);
 	}
-	//Comprobar que se puede crear y escribir en el fichero de salida
+	//Comprobar que se puede crear y escribir en el fichero de salida xml
 	private static void validArg3(String arg) throws IOException{
 		File file = new File(arg);
 		file.delete();
@@ -154,12 +158,12 @@ public class P5_XPATH {
 		File xmlFile = new File(args[3]);
 		validator.validate(new StreamSource(xmlFile));
 	}
-
+	
 	/*************************************************************  EMPIEZA PRACTICA 4  *************************************************************************/
-
+	
 	private static Map<String, List<Map<String,String>>>getDatasetConcepts(List<String>
-					lConcepts, Map<String, Map<String, String>> mDatasets) 
-					throws SAXException,ParserConfigurationException,IOException, InterruptedException, InterruptedException {
+	lConcepts, Map<String, Map<String, String>> mDatasets) 
+	throws SAXException,ParserConfigurationException,IOException, InterruptedException, InterruptedException {
 		/*Devuelve un mapa donde la clave es el id del dataset y los valores son todos los graphs encontrados
 		en el json que son pertinentes*/
 		/* Código a completar:
@@ -205,7 +209,16 @@ public class P5_XPATH {
 		// Mostrar todos los trabajadores que se han ejecutado. Debe coincidir con los creados
 		System.out.println("\nYa han terminado los "+numTrabajadoresTerminados.get()+" JSONDatasetParser");
 		
-
+		
 		return mapa;
+	}
+	/*************************************************************  EMPIEZA PRACTICA 5  *************************************************************************/
+
+	//Comprobar que se puede crear y escribir en el fichero de salida json
+	private static void validArg4(String arg) throws IOException{
+		File file = new File(arg);
+		file.delete();
+		if(file.createNewFile() && file.canWrite())
+			System.out.println("Se pude crear y escribir en el fichero "+arg);
 	}
 }

@@ -1,13 +1,10 @@
 package piat.opendatasearch;
 
-import java.util.ArrayList;
-import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
-import java.util.Map.Entry;
 
 /**
- * @author Nerea Calderon Gonzalo 50356369P
+ * @author Alvaro Miguel Arroyo Gonzalez 51549946T
  *
  */
 
@@ -100,73 +97,53 @@ import java.util.Map.Entry;
 					salidaXML.append (pResource.replace("#valor#", entry.getKey()));
 					String [] string = {"@type"};
 					valorValido(pConcept2, salidaXML, mapaValor, string);	
-					//salidaXML.append (pConcept2.replace("#valor#", mapaValor.get("@type")));
 					string[0] = "link";
 					valorValido(pLink, salidaXML, mapaValor, string);	
-					//salidaXML.append (pLink.replace("#valor#", mapaValor.get("link")));
 					string[0] = "title";
 					valorValido(pTitle, salidaXML, mapaValor, string);	
-					//salidaXML.append (pTitle.replace("#valor#", mapaValor.get("title")));
 					salidaXML.append("\n\t\t\t\t<location>" );
 					string[0] = "eventLocation";
 					valorValido(pEventLocation, salidaXML, mapaValor, string);	
-					//salidaXML.append (pEventLocation.replace("#valor#", mapaValor.get("eventLocation")));
 					salidaXML.append("\n\t\t\t\t\t\t<address>" );
 					string[0] = "area";
 					valorValido(pArea, salidaXML, mapaValor, string);	
-					//salidaXML.append (pArea.replace("#valor#", mapaValor.get("area")));
 					string[0] = "locality";
 					valorValido(pLocality, salidaXML, mapaValor, string);	
-					//salidaXML.append (pLocality.replace("#valor#", mapaValor.get("locality")));
 					string[0] = "street-address";
 					valorValido(pStreet, salidaXML, mapaValor, string);	
-					//salidaXML.append (pStreet.replace("#valor#", mapaValor.get("street-address")));
 					salidaXML.append("\n\t\t\t\t\t\t</address>" );
 					salidaXML.append("\n\t\t\t\t\t\t<timetable>" );
 					string[0] = "dtstart";
 					valorValido(pStart, salidaXML, mapaValor, string);	
-					//salidaXML.append (pStart.replace("#valor#", mapaValor.get("dtstart")));
 					string[0] = "dtend";
 					valorValido(pEnd, salidaXML, mapaValor, string);
-					//if(!mapaValor.get("dtend").equals(""))
-						//salidaXML.append (pEnd.replace("#valor#", mapaValor.get("dtend")));
 					salidaXML.append("\n\t\t\t\t\t\t</timetable>" );
 					String [] string1 = {"latitude", "longitude"};
 					valorValido(pGeoreference, salidaXML, mapaValor, string1);	
-					//salidaXML.append (pGeoreference.replace("#valor#", mapaValor.get("latitude") + " " + mapaValor.get("longitude")));
 					salidaXML.append("\n\t\t\t\t</location>" );
 					string[0] = "description";
 					valorValido(pDescription, salidaXML, mapaValor, string);	
-					//salidaXML.append (pDescription.replace("#valor#", mapaValor.get("description")));
 					salidaXML.append("\n\t\t\t</resource>");
 				}
-				
 			}
-			
 			salidaXML.append("\n\t\t</resources>");
 		}
 		
 		private static void valorValido(String patron, StringBuilder salidaXML, Map<String, String> map, String [] key){
-		
-			if(key.length == 2) {
-				if(!map.get(key[0]).equals("") && !map.get(key[1]).equals(""))
-					salidaXML.append (patron.replace("#valor#", map.get(key[0]) + " " + map.get(key[1])));
+			if(map.containsKey(key[0])){
+				switch(key.length) {
+				case 2:
+					if(!map.get(key[0]).equals("") && !map.get(key[1]).equals(""))
+						salidaXML.append (patron.replace("#valor#", map.get(key[0]) + " " + map.get(key[1])));
+					break;
+				case 1:
+					if(!map.get(key[0]).equals(""))
+						salidaXML.append (patron.replace("#valor#", map.get(key[0])));		
+					break;
+				default:
+					break;
+				}
 			}
-			else if(key.length == 1)
-				if(!map.get(key[0]).equals(""))
-					salidaXML.append (patron.replace("#valor#", map.get(key[0])));
-			/*switch(key.length) {
-			case 2:
-				if(!map.get(key[0]).equals(null) && !map.get(key[1]).equals(null))
-					salidaXML.append (patron.replace("#valor#", map.get(key[0]) + " " + map.get(key[1])));
-				break;
-			/*case 1:
-				if(!map.get(key[0]).equals(null))
-					salidaXML.append (patron.replace("#valor#", map.get(key[0])));		
-				break;
-			default:
-				break;
-			}*/
 		}
 	}
 
