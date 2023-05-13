@@ -155,18 +155,6 @@ import java.util.Map.Entry;
 			else if(key.length == 1)
 				if(!map.get(key[0]).equals(""))
 					salidaXML.append (patron.replace("#valor#", map.get(key[0])));
-			/*switch(key.length) {
-			case 2:
-				if(!map.get(key[0]).equals(null) && !map.get(key[1]).equals(null))
-					salidaXML.append (patron.replace("#valor#", map.get(key[0]) + " " + map.get(key[1])));
-				break;
-			/*case 1:
-				if(!map.get(key[0]).equals(null))
-					salidaXML.append (patron.replace("#valor#", map.get(key[0])));		
-				break;
-			default:
-				break;
-			}*/
 		}
 	}
 

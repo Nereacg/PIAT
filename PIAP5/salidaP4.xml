@@ -195,22 +195,21 @@
 			</resource>
 			<resource id="https://datos.madrid.es/egob/catalogo/300107-0-agenda-actividades-eventos.json">
 			<concept id="https://datos.madrid.es/egob/kos/actividades/DanzaBaile"/>
-				<link> <![CDATA[http://www.madrid.es/sites/v/index.jsp?vgnextchannel=ca9671ee4a9eb410VgnVCM100000171f5a0aRCRD&vgnextoid=779aef0f9cff7810VgnVCM1000001d4a900aRCRD]]> </link>
-				<title>Ayúdanos a cuidar tu Salud</title>
+				<link> <![CDATA[http://www.madrid.es/sites/v/index.jsp?vgnextchannel=ca9671ee4a9eb410VgnVCM100000171f5a0aRCRD&vgnextoid=58370376a1a77810VgnVCM1000001d4a900aRCRD]]> </link>
+				<title>Bailando Versos</title>
 				<location>
-						<eventLocation>Centro Municipal de Mayores 'La Vaguada'</eventLocation>
+						<eventLocation>Teatro Municipal de Vallecas</eventLocation>
 						<address>
-								<area>https://datos.madrid.es/egob/kos/Provincia/Madrid/Municipio/Madrid/Distrito/Fuencarral-ElPardo/Barrio/ElPilar</area>
+								<area>https://datos.madrid.es/egob/kos/Provincia/Madrid/Municipio/Madrid/Distrito/VillaDeVallecas/Barrio/CascoHVallecas</area>
 								<locality>MADRID</locality>
-								<street>AVENIDA MONFORTE DE LEMOS 38</street>
+								<street>CALLE PASO DE VILLAMANRIQUE 3</street>
 						</address>
 						<timetable>
-							<start>2023-05-09 12:00:00.0</start>
-							<end>2023-05-09 23:59:00.0</end>
+							<start>2023-05-27 19:00:00.0</start>
+							<end>2023-05-27 23:59:00.0</end>
 						</timetable>
-						<georeference>40.47860087334554 -3.7094408342979954</georeference>
+						<georeference>40.37762362093048 -3.6229095774784765</georeference>
 				</location>
-				<description>Hall de Centro Municipal de Mayores La Vaguada    Horario de 12 a 14 horas</description>
 			</resource>
 		</resources>
 	</results>
