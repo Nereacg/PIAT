@@ -194,31 +194,8 @@ public class JSONDatasetParser implements Runnable {
 					jsonReader.skipValue();
 				}
 			}
-<<<<<<< HEAD
 		if (lConcepts.contains(map.get("@type")) && !graphs.contains(map)){
 			graphs.add(map);
-=======
-		}
-		//	- Una vez procesadas todas las propiedades, ver si la clave @type tiene un valor igual a alguno de los concept de la lista lConcepts. Si es as�
-		//	  guardar en un mapa Map<String,String> todos los valores de las variables temporales recogidas en el paso anterior y a�adir este mapa al mapa graphs
-		if(lConcepts.contains(type) && graphs.size()<5 && !graphs.contains(mapaTemp)) {//Si se han a�adido 5 graph a la lista dejar de meterlos en el mapa
-			mapaTemp.put("@id", id);
-			mapaTemp.put("@type", type);
-			mapaTemp.put("link", link);
-			mapaTemp.put("title", title);
-			mapaTemp.put("dtstart", dtstart);
-			mapaTemp.put("dtend", dtend);
-			mapaTemp.put("eventLocation", eventLocation);
-			mapaTemp.put("area", idd);
-			mapaTemp.put("locality", locality);
-			mapaTemp.put("street-address", street);
-			mapaTemp.put("latitude", latitude);
-			mapaTemp.put("longitude", longitude);
-			mapaTemp.put("description", description);
-
-			graphs.add(mapaTemp);
-			
->>>>>>> origin/main
 		}
 	}
 }

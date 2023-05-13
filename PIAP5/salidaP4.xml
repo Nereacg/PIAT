@@ -1,0 +1,216 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<searchResults 	xmlns="http://piat.dte.upm.es/practica4"
+				xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+				xsi:schemaLocation="http://piat.dte.upm.es/practica4 ResultadosBusquedaP4.xsd">
+	<summary>
+		<query>0016-018</query>
+		<numConcepts>6</numConcepts>
+		<numDatasets>2</numDatasets>
+	</summary>
+	<results>
+		<concepts>
+			<concept>https://datos.madrid.es/egob/kos/actividades/DanzaBaile</concept>
+			<concept>https://datos.madrid.es/egob/kos/actividades/DanzaBaile/ClasicaEspanola</concept>
+			<concept>https://datos.madrid.es/egob/kos/actividades/DanzaBaile/ContemporaneaBreakdanceHipHop</concept>
+			<concept>https://datos.madrid.es/egob/kos/actividades/DanzaBaile/Flamenco</concept>
+			<concept>https://datos.madrid.es/egob/kos/actividades/DanzaBaile/FolcloreEtnica</concept>
+			<concept>https://datos.madrid.es/egob/kos/actividades/DanzaBaile/SalonTango</concept>
+		</concepts>
+		<datasets>
+			<dataset id="https://datos.madrid.es/egob/catalogo/206974-0-agenda-eventos-culturales-100.json">
+				<title>Actividades Culturales y de Ocio Municipal en los próximos 100 días</title>
+				<description>Relación de actividades de carácter cultural y de ocio, que se van a celebrar en los próximos 100 días y/o que se están celebrando, en centros Municipales . Podrá encontrar así las actividades de Centros Culturales, Socioculturales, Centros Juveniles, Bibliotecas, Centros de Mayores, Museos, Juntas de Distrito, etc. En este Portal, existen otros conjuntos de datos donde puede ver la relación de los diversos centros anteriores. Tenga en cuenta que hay ciertas actividades que aunque son gratuitas , requieren inscripción previa. En el campo 'CONTENT-URL', esta la url donde puede obtener información adicional de la actividad y donde se especifica si se requiere inscripción y como realizarla . Hay otras actividades, que si tienen un coste asociado, igualmente tiene la información en la url anterior. En el apartado 'Documentación asociada', hay un documento con la estructura del fichero y las recomendaciones y/o advertencias, que le permitirá usar y comprender mejor los datos.</description>
+				<theme>http://datos.gob.es/kos/sector-publico/sector/cultura-ocio</theme>
+			</dataset>
+			<dataset id="https://datos.madrid.es/egob/catalogo/300107-0-agenda-actividades-eventos.json">
+				<title>Agenda de actividades y eventos</title>
+				<description>Relación de actividades de distinto tipo que se van a celebrar o que se están celebrando, en centros municipales o asociados la actividad gestionada por el Ayuntamiento. Podrá encontrar así las actividades de Centros Culturales, Socioculturales, Centros Juveniles, Bibliotecas, Centros de Mayores, Museos, Juntas de Distrito, etc. En la columna P del fichero descargable, puede ver en que centro se realiza dicha actividad (puede ser en centros del ayuntamiento o no) No se trata de una relación exhaustiva de toda la actividad del Ayuntamiento de Madrid, sino solamente de aquellos que ya se encuentran incluidos en la página web www.madrid.es . Asi mismo pueden existir eventos, que por motivos de temática, pueden incluso estar duplicados. En este Portal, existen otros conjuntos de datos donde puede ver la relación de los diversos centros anteriores. Tenga en cuenta que hay ciertas actividades que aunque son gratuitas , requieren inscripción previa. En el campo 'CONTENT-URL', esta la url donde puede obtener información adicional de la actividad y donde se especifica si se requiere inscripción y como realizarla . Hay otras actividades, que si tienen un coste asociado, igualmente tiene la información en la url anterior. En la página siguiente tiene un buscador para poder encontrar una actividad en particular. En el apartado 'Documentación asociada', hay un documento con la estructura del fichero y las recomendaciones y/o advertencias, que le permitirá usar y comprender mejor los datos.</description>
+				<theme>http://datos.gob.es/kos/sector-publico/sector/cultura-ocio</theme>
+			</dataset>
+		</datasets>
+		<resources>
+			<resource id="https://datos.madrid.es/egob/catalogo/206974-0-agenda-eventos-culturales-100.json">
+			<concept id="https://datos.madrid.es/egob/kos/actividades/DanzaBaile"/>
+				<link> <![CDATA[http://www.madrid.es/sites/v/index.jsp?vgnextchannel=ca9671ee4a9eb410VgnVCM100000171f5a0aRCRD&vgnextoid=5e6bba8910a53810VgnVCM2000001f4a900aRCRD]]> </link>
+				<title>Aprende a bailar Marinera</title>
+				<location>
+						<eventLocation>Centro Cultural Antonio Machado (San Blas - Canillejas)</eventLocation>
+						<address>
+								<area>https://datos.madrid.es/egob/kos/Provincia/Madrid/Municipio/Madrid/Distrito/SanBlas-Canillejas/Barrio/Arcos</area>
+								<locality>MADRID</locality>
+								<street>CALLE SAN ROMÁN DEL VALLE 8</street>
+						</address>
+						<timetable>
+							<start>2022-10-29 00:00:00.0</start>
+							<end>2023-07-01 23:59:00.0</end>
+						</timetable>
+						<georeference>40.42027705095574 -3.621741078700336</georeference>
+				</location>
+			</resource>
+			<resource id="https://datos.madrid.es/egob/catalogo/206974-0-agenda-eventos-culturales-100.json">
+			<concept id="https://datos.madrid.es/egob/kos/actividades/DanzaBaile"/>
+				<link> <![CDATA[http://www.madrid.es/sites/v/index.jsp?vgnextchannel=ca9671ee4a9eb410VgnVCM100000171f5a0aRCRD&vgnextoid=4268b69ecc637810VgnVCM1000001d4a900aRCRD]]> </link>
+				<title>Aromas de danza</title>
+				<location>
+						<eventLocation>Centro Cultural Casa de Vacas (Retiro)</eventLocation>
+						<address>
+								<area>https://datos.madrid.es/egob/kos/Provincia/Madrid/Municipio/Madrid/Distrito/Retiro/Barrio/LosJeronimos</area>
+								<locality>MADRID</locality>
+								<street>PASEO COLOMBIA 1</street>
+						</address>
+						<timetable>
+							<start>2023-06-09 19:00:00.0</start>
+							<end>2023-06-09 23:59:00.0</end>
+						</timetable>
+						<georeference>40.41906024374356 -3.6840615387926956</georeference>
+				</location>
+			</resource>
+			<resource id="https://datos.madrid.es/egob/catalogo/206974-0-agenda-eventos-culturales-100.json">
+			<concept id="https://datos.madrid.es/egob/kos/actividades/DanzaBaile/FolcloreEtnica"/>
+				<link> <![CDATA[http://www.madrid.es/sites/v/index.jsp?vgnextchannel=ca9671ee4a9eb410VgnVCM100000171f5a0aRCRD&vgnextoid=0b0bdae959397810VgnVCM2000001f4a900aRCRD]]> </link>
+				<title>Asociación Cultural Chilena Cal y Canto</title>
+				<location>
+						<eventLocation>Auditorio y sala de exposiciones Paco de Lucía (Latina)</eventLocation>
+						<address>
+								<area>https://datos.madrid.es/egob/kos/Provincia/Madrid/Municipio/Madrid/Distrito/Latina/Barrio/LasAguilas</area>
+								<locality>MADRID</locality>
+								<street>AVENIDA LAS AGUILAS 2</street>
+						</address>
+						<timetable>
+							<start>2023-05-19 19:00:00.0</start>
+							<end>2023-05-19 23:59:00.0</end>
+						</timetable>
+						<georeference>40.38493929920335 -3.7641963952601154</georeference>
+				</location>
+				<description>En su vigésimoquinto aniversario, presenta un encuentro de danzas tradicionales junto a organizaciones amigas de distintos países para difundir la música y la cultura.</description>
+			</resource>
+			<resource id="https://datos.madrid.es/egob/catalogo/206974-0-agenda-eventos-culturales-100.json">
+			<concept id="https://datos.madrid.es/egob/kos/actividades/DanzaBaile"/>
+				<link> <![CDATA[http://www.madrid.es/sites/v/index.jsp?vgnextchannel=ca9671ee4a9eb410VgnVCM100000171f5a0aRCRD&vgnextoid=58370376a1a77810VgnVCM1000001d4a900aRCRD]]> </link>
+				<title>Bailando Versos</title>
+				<location>
+						<eventLocation>Teatro Municipal de Vallecas</eventLocation>
+						<address>
+								<area>https://datos.madrid.es/egob/kos/Provincia/Madrid/Municipio/Madrid/Distrito/VillaDeVallecas/Barrio/CascoHVallecas</area>
+								<locality>MADRID</locality>
+								<street>CALLE PASO DE VILLAMANRIQUE 3</street>
+						</address>
+						<timetable>
+							<start>2023-05-27 19:00:00.0</start>
+							<end>2023-05-27 23:59:00.0</end>
+						</timetable>
+						<georeference>40.37762362093048 -3.6229095774784765</georeference>
+				</location>
+			</resource>
+			<resource id="https://datos.madrid.es/egob/catalogo/206974-0-agenda-eventos-culturales-100.json">
+			<concept id="https://datos.madrid.es/egob/kos/actividades/DanzaBaile"/>
+				<link> <![CDATA[http://www.madrid.es/sites/v/index.jsp?vgnextchannel=ca9671ee4a9eb410VgnVCM100000171f5a0aRCRD&vgnextoid=9c23ab8023633810VgnVCM2000001f4a900aRCRD]]> </link>
+				<title>Bailar, recordar, resistir</title>
+				<location>
+						<eventLocation>Centro de Cultura Contemporánea Conde Duque</eventLocation>
+						<address>
+								<area>https://datos.madrid.es/egob/kos/Provincia/Madrid/Municipio/Madrid/Distrito/Centro/Barrio/Universidad</area>
+								<locality>MADRID</locality>
+								<street>CALLE CONDE DUQUE 9</street>
+						</address>
+						<timetable>
+							<start>2023-05-13 17:00:00.0</start>
+							<end>2023-05-13 23:59:00.0</end>
+						</timetable>
+						<georeference>40.42802889001877 -3.710182353581842</georeference>
+				</location>
+			</resource>
+			<resource id="https://datos.madrid.es/egob/catalogo/300107-0-agenda-actividades-eventos.json">
+			<concept id="https://datos.madrid.es/egob/kos/actividades/DanzaBaile"/>
+				<link> <![CDATA[http://www.madrid.es/sites/v/index.jsp?vgnextchannel=ca9671ee4a9eb410VgnVCM100000171f5a0aRCRD&vgnextoid=614bade4847a6810VgnVCM1000001d4a900aRCRD]]> </link>
+				<title>Alegría de Cirque du Soleil (Circo del Sol)</title>
+				<location>
+						<eventLocation>Escenario Puerta del Ángel</eventLocation>
+						<address>
+								<area>https://datos.madrid.es/egob/kos/Provincia/Madrid/Municipio/Madrid/Distrito/Moncloa-Aravaca/Barrio/CasaCampo</area>
+								<locality>MADRID</locality>
+								<street>CALLE HERRADURA 3</street>
+						</address>
+						<timetable>
+							<start>2023-11-16 00:00:00.0</start>
+							<end>2023-11-16 23:59:00.0</end>
+						</timetable>
+						<georeference>40.41730150976797 -3.7286223540730377</georeference>
+				</location>
+			</resource>
+			<resource id="https://datos.madrid.es/egob/catalogo/300107-0-agenda-actividades-eventos.json">
+			<concept id="https://datos.madrid.es/egob/kos/actividades/DanzaBaile"/>
+				<link> <![CDATA[http://www.madrid.es/sites/v/index.jsp?vgnextchannel=ca9671ee4a9eb410VgnVCM100000171f5a0aRCRD&vgnextoid=5e6bba8910a53810VgnVCM2000001f4a900aRCRD]]> </link>
+				<title>Aprende a bailar Marinera</title>
+				<location>
+						<eventLocation>Centro Cultural Antonio Machado (San Blas - Canillejas)</eventLocation>
+						<address>
+								<area>https://datos.madrid.es/egob/kos/Provincia/Madrid/Municipio/Madrid/Distrito/SanBlas-Canillejas/Barrio/Arcos</area>
+								<locality>MADRID</locality>
+								<street>CALLE SAN ROMÁN DEL VALLE 8</street>
+						</address>
+						<timetable>
+							<start>2022-10-29 00:00:00.0</start>
+							<end>2023-07-01 23:59:00.0</end>
+						</timetable>
+						<georeference>40.42027705095574 -3.621741078700336</georeference>
+				</location>
+			</resource>
+			<resource id="https://datos.madrid.es/egob/catalogo/300107-0-agenda-actividades-eventos.json">
+			<concept id="https://datos.madrid.es/egob/kos/actividades/DanzaBaile"/>
+				<link> <![CDATA[http://www.madrid.es/sites/v/index.jsp?vgnextchannel=ca9671ee4a9eb410VgnVCM100000171f5a0aRCRD&vgnextoid=4268b69ecc637810VgnVCM1000001d4a900aRCRD]]> </link>
+				<title>Aromas de danza</title>
+				<location>
+						<eventLocation>Centro Cultural Casa de Vacas (Retiro)</eventLocation>
+						<address>
+								<area>https://datos.madrid.es/egob/kos/Provincia/Madrid/Municipio/Madrid/Distrito/Retiro/Barrio/LosJeronimos</area>
+								<locality>MADRID</locality>
+								<street>PASEO COLOMBIA 1</street>
+						</address>
+						<timetable>
+							<start>2023-06-09 19:00:00.0</start>
+							<end>2023-06-09 23:59:00.0</end>
+						</timetable>
+						<georeference>40.41906024374356 -3.6840615387926956</georeference>
+				</location>
+			</resource>
+			<resource id="https://datos.madrid.es/egob/catalogo/300107-0-agenda-actividades-eventos.json">
+			<concept id="https://datos.madrid.es/egob/kos/actividades/DanzaBaile/FolcloreEtnica"/>
+				<link> <![CDATA[http://www.madrid.es/sites/v/index.jsp?vgnextchannel=ca9671ee4a9eb410VgnVCM100000171f5a0aRCRD&vgnextoid=0b0bdae959397810VgnVCM2000001f4a900aRCRD]]> </link>
+				<title>Asociación Cultural Chilena Cal y Canto</title>
+				<location>
+						<eventLocation>Auditorio y sala de exposiciones Paco de Lucía (Latina)</eventLocation>
+						<address>
+								<area>https://datos.madrid.es/egob/kos/Provincia/Madrid/Municipio/Madrid/Distrito/Latina/Barrio/LasAguilas</area>
+								<locality>MADRID</locality>
+								<street>AVENIDA LAS AGUILAS 2</street>
+						</address>
+						<timetable>
+							<start>2023-05-19 19:00:00.0</start>
+							<end>2023-05-19 23:59:00.0</end>
+						</timetable>
+						<georeference>40.38493929920335 -3.7641963952601154</georeference>
+				</location>
+				<description>En su vigésimoquinto aniversario, presenta un encuentro de danzas tradicionales junto a organizaciones amigas de distintos países para difundir la música y la cultura.</description>
+			</resource>
+			<resource id="https://datos.madrid.es/egob/catalogo/300107-0-agenda-actividades-eventos.json">
+			<concept id="https://datos.madrid.es/egob/kos/actividades/DanzaBaile"/>
+				<link> <![CDATA[http://www.madrid.es/sites/v/index.jsp?vgnextchannel=ca9671ee4a9eb410VgnVCM100000171f5a0aRCRD&vgnextoid=58370376a1a77810VgnVCM1000001d4a900aRCRD]]> </link>
+				<title>Bailando Versos</title>
+				<location>
+						<eventLocation>Teatro Municipal de Vallecas</eventLocation>
+						<address>
+								<area>https://datos.madrid.es/egob/kos/Provincia/Madrid/Municipio/Madrid/Distrito/VillaDeVallecas/Barrio/CascoHVallecas</area>
+								<locality>MADRID</locality>
+								<street>CALLE PASO DE VILLAMANRIQUE 3</street>
+						</address>
+						<timetable>
+							<start>2023-05-27 19:00:00.0</start>
+							<end>2023-05-27 23:59:00.0</end>
+						</timetable>
+						<georeference>40.37762362093048 -3.6229095774784765</georeference>
+				</location>
+			</resource>
+		</resources>
+	</results>
+</searchResults>

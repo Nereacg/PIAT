@@ -15,6 +15,7 @@ import javax.xml.xpath.XPathFactory;
 import org.w3c.dom.Document;
 import org.w3c.dom.Node;
 import org.w3c.dom.NodeList;
+import org.xml.sax.InputSource;
 import org.xml.sax.SAXException;
 
 
@@ -33,67 +34,73 @@ public class XPATH_Evaluador{
 	 * @throws	ParserConfigurationException 
 	 * @throws	SAXException 
 	 */
-	public static List<Propiedad> evaluar (String ficheroXML) throws IOException, XPathExpressionException, ParserConfigurationException, SAXException {
+	public static List<Propiedad> evaluar (String ficheroXML) throws IOException, XPathExpressionException {
 		// TODO: 
 		// Realiza las 4 consultas XPath al documento XML de entrada que se indican en el enunciado en el apartado "3.2 Búsqueda de información y generación del documento de resultados."
+
+		List<Propiedad> lPropiedad = new ArrayList<Propiedad>();
+try {
+			
+			/*Abrir fichero xml*/
+			
+			InputSource inputSource = new InputSource(ficheroXML);					// Creación de la fuente de datos
+			DocumentBuilderFactory factory = DocumentBuilderFactory.newInstance();	// Creación de la factoria
+			//factory.setNamespaceAware(true);										// Configuración de la factoria para que trabaje con espacios de nombres
+			DocumentBuilder builder = factory.newDocumentBuilder();						 	
+			Document inputDoc = builder.parse (inputSource);
+        
+	        //se crea el objeto XPATH que evaluará las expresiones
+	        XPath xPath = XPathFactory.newInstance().newXPath();
+
+		
 		// Cada consulta devolverá una información que se añadirá a la colección List <Propiedad>, que es la que devuelve este método
-		// Una consulta puede devolver una propiedad o varias
-		List<Propiedad> list = new ArrayList<Propiedad>();
-		Propiedad propiedad;
-		String resultado;
-		//En primer lugar se crea el arbol DOM a partir del fichero XML fuente
-		final DocumentBuilderFactory factory = DocumentBuilderFactory.newInstance();
-		factory.setNamespaceAware(true);
-		final DocumentBuilder builder = factory.newDocumentBuilder();
-		Document doc = builder.parse(ficheroXML);
-		//se crea el objeto XPATH que evaluará las expresiones
-		XPath xPath = XPathFactory.newInstance().newXPath();
-		//Se evalua la primera expresion query
-		String expresionXPATHquery = "//summary/query//text()";
-		String query = (String) xPath.evaluate(expresionXPATHquery, doc, XPathConstants.STRING);
-		propiedad = new Propiedad("query", query);
-		list.add(propiedad);
-		//Se evalua la segunda expresion numeroResources
-		String expresionXPATHnumeroResources = "count(//resource)";
-		Double numeroResources = (Double) xPath.evaluate(expresionXPATHnumeroResources, doc, XPathConstants.NUMBER);
-		resultado = numeroResources.toString();
-		propiedad = new Propiedad("numeroResources", resultado);
-		list.add(propiedad);
-		//Se evalua la tercera expresion infDatasets
-		String expresionXPATHinfDatasets = "//resource";
-		NodeList infDatasets = (NodeList) xPath.evaluate(expresionXPATHinfDatasets, doc, XPathConstants.NODESET);
-		List<String> listaInfDatasets = new ArrayList<String>();
-		for(int i=0; i<infDatasets.getLength(); i++){
-			Node nodo = infDatasets.item(i);
-			String infDataset = nodo.getAttributes().getNamedItem("dataset").getNodeValue();
-			boolean add = true;
-			if(!listaInfDatasets.contains(infDataset)){
-				listaInfDatasets.add(infDataset);
+
+			/*Rutas consultas*/
+			//a) Contenido textual del elemento <query>.
+			String sPathQuery="//summary/query//text()";
+			//b) Número de elementos <resource> hijos de <resources>.
+			String sPathDataset="count(//resources/resource)";
+			//c) Contenido de cada uno de los elementos <eventLocation>, descendientes de <resource>. Si su contenido está vacío no se tendrá en cuenta. Si una ubicación está repetida sólo se añadirá una vez al documento de salida.
+			String sPathEvent="//resources/resource/location/eventLocation//text()";
+			//d) Por cada elemento <dataset>, hijo de <datasets>, número de elementos <resource> cuyo atributo id es igual al atributo id del elemento <dataset>
+			String sPathResourceId="//datasets/dataset[@id=//resources/resource/@id]/@id"; //me coge todos los id de dataset que aparecen también en algún resoruce
+			
+			// Una consulta puede devolver una propiedad o varias
+
+				/*Procesar xml*/
+			
+			Propiedad p;
+			
+			p = new Propiedad("query", (String) xPath.evaluate(sPathQuery, inputDoc, XPathConstants.STRING)); //¿¿¿¿estará bien crear tantas instancias de propiedad?
+			lPropiedad.add(p);
+			
+	        Double numResources = (Double) xPath.evaluate(sPathDataset, inputDoc, XPathConstants.NUMBER);
+	        String resultado= String.valueOf(numResources.intValue());	// Convertir a int para quitar decimales, y luego a String
+	        p=new Propiedad ("numResources", resultado);
+			lPropiedad.add(p);
+			
+			NodeList lEventLocation= (NodeList) xPath.evaluate(sPathEvent, inputDoc, XPathConstants.NODESET);
+			for(int i=0;i< lEventLocation.getLength(); i++) {
+				p = new Propiedad("eventLocation", lEventLocation.item(i).getTextContent()); //ir creando cada propiedad título
+				lPropiedad.add(p);
 			}
-			else
-				add = false;
-			propiedad = new Propiedad(infDataset, Integer.toString(listaInfDatasets.size()));
-			if(add && !infDataset.equals(""))
-				list.add(propiedad);
-		}
-		List<String> listaUbicaciones = new ArrayList<String>();
-		for(int i=0; i<infDatasets.getLength(); i++){
-			Node nodo = infDatasets.item(i);
-			String ubicacion = nodo.getAttributes().getNamedItem("eventLocation").getNodeValue();
-			boolean add = true;
-			if(!listaUbicaciones.contains(ubicacion)){
-				listaUbicaciones.add(ubicacion);
+			
+			
+			NodeList lResource= (NodeList) xPath.evaluate(sPathResourceId, inputDoc, XPathConstants.NODESET);
+			for(int i=0;i< lResource.getLength(); i++) {
+				String id = lResource.item(i).getTextContent(); //obtener los id de dataset que también apracen en resource
+				String sPathCountResourceId = "count(//resources/resource[@id=\""+id+"\"])";//Contar las veces que aparece ese id en resources
+				p = new Propiedad(id, (String) xPath.evaluate(sPathCountResourceId, inputDoc, XPathConstants.STRING));
+				lPropiedad.add(p);
 			}
-			else
-				add = false;
-			propiedad = new Propiedad("ubicacion", ubicacion);
-			if(add && !ubicacion.equals(""))
-				list.add(propiedad);
-		}
-		System.out.println (listaInfDatasets.toString());
-		System.out.println (listaUbicaciones.toString());
-		return list;
-	}
+			
+}catch (Throwable t) {  t.printStackTrace();  }
+
+return lPropiedad;
+
+		
+	}//del (main)
+
 	/**
 	 * Esta clase interna define una propiedad equivalente a "nombre":"valor" en JSON
 	 */
