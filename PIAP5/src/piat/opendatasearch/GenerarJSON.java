@@ -2,6 +2,7 @@ package piat.opendatasearch;
 
 import java.io.FileWriter;
 import java.io.IOException;
+import java.util.ArrayList;
 import java.util.List;
 
 import com.google.gson.stream.JsonWriter;
@@ -29,17 +30,41 @@ public class GenerarJSON {
 			writer.beginObject();
 			if ((posicion=buscarPropiedad("query", listaPropiedades))>=0)
 				writer.name(listaPropiedades.get(posicion).nombre).value(listaPropiedades.get(posicion).valor); // ---->  "query": "018",
-			if ((posicion=buscarPropiedad("numeroResources", listaPropiedades))>=0)
-				writer.name(listaPropiedades.get(posicion).nombre).value(Integer.parseInt(listaPropiedades.get(posicion).valor)); // ---->  "numeroResources": "8",
-			if ((posicion=buscarPropiedad("ubicacion", listaPropiedades))>=0){ // ----> "ubicaciones": ["tercero", "segundo", "cuarto"            ]
+			if ((posicion=buscarPropiedad("numResources", listaPropiedades))>=0)
+				writer.name(listaPropiedades.get(posicion).nombre).value(Integer.parseInt(listaPropiedades.get(posicion).valor)); // ---->  "numeroResources": "10",
+			if ((posicion=buscarPropiedad("id", listaPropiedades))>=0){ // ----> "id": "https:...*.json"            ]
+				writer.name("infDataset");                    // ----> "infDataset":    
+				writer.beginArray();                                // ----> [
+				while (posicion<listaPropiedades.size() && listaPropiedades.get(posicion).nombre.equals("id")){
+					writer.beginObject();							// ----> {
+					writer.name(listaPropiedades.get(posicion).nombre).value(listaPropiedades.get(posicion).valor); // ---->  "id": "https:...*.json",
+					posicion++;								// siguiente propiedad
+					writer.name(listaPropiedades.get(posicion).nombre).value(listaPropiedades.get(posicion).valor); // ---->  "num": "5",
+					writer.endObject();    // ----> }
+					posicion++; 							// siguiente propiedad
+				}
+				writer.endArray();     // ----> ]
+			} 	
+			if ((posicion=buscarPropiedad("eventLocation", listaPropiedades))>=0){ // ----> "ubicaciones": ["tercero", "segundo", "cuarto"            ]
+				List<String> listaUbicaciones = new ArrayList<String>();
+				for (int i=0;i<listaPropiedades.size();i++){
+					if(listaPropiedades.get(i).nombre.equals("eventLocation") && listaUbicaciones.contains(listaPropiedades.get(i).valor)==false){
+						listaUbicaciones.add(listaPropiedades.get(i).valor);
+					}
+				}
 				writer.name("ubicaciones");                    // ----> "ubicaciones":    
 				writer.beginArray();                                // ----> [
-				writer.value(listaPropiedades.get(posicion).valor); // ----> "tercero",
+				for (int i=0;i<listaUbicaciones.size();i++){
+					writer.value(listaUbicaciones.get(i));  //  -----> "segundo", "cuarto"
+				}
+				writer.endArray();     // ----> ]
+			}
+			/* 	writer.value(listaPropiedades.get(posicion).valor); // ----> "Centro Cultural Antonio Machado (San Blas - Canillejas)",
 				//writer.beginObject();
 				//writer.name(listaPropiedades.get(posicion).nombre).value(listaPropiedades.get(posicion).valor);
 				//writer.endObject();
 				posicion++;              
-				while (posicion<listaPropiedades.size() && listaPropiedades.get(posicion).nombre.equals("ubicacion")){
+				while (posicion<listaPropiedades.size() && listaPropiedades.get(posicion).nombre.equals("eventLocation")){
 					writer.value(listaPropiedades.get(posicion).valor);  //  -----> "segundo", "cuarto"
 					//writer.beginObject();
 					//writer.name(listaPropiedades.get(posicion).nombre).value(listaPropiedades.get(posicion).valor);
@@ -47,7 +72,7 @@ public class GenerarJSON {
 					posicion++;
 				}          
 				writer.endArray();     // ----> ]
-			} 
+			} */
 			writer.endObject();    // ----> }
 			writer.close();
 
