@@ -73,7 +73,7 @@ public class P5_XPATH {
 			bufferedWriter.close();
 			validXsd(args);
 			//Practica 5 - Generar el fichero JSON
-			GenerarJSON.generar(contenido, XPATH_Evaluador.evaluar(args[4]));
+			GenerarJSON.generar(args[4], XPATH_Evaluador.evaluar(args[3]));
 		} catch(SAXException | ParserConfigurationException | IOException
 				| XPathExpressionException e){
 			e.printStackTrace();

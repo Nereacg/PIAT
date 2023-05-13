@@ -18,13 +18,13 @@
 		</concepts>
 		<datasets>
 			<dataset id="https://datos.madrid.es/egob/catalogo/206974-0-agenda-eventos-culturales-100.json">
-				<title>Actividades Culturales y de Ocio Municipal en los pr√≥ximos 100 d√≠as</title>
-				<description>Relaci√≥n de actividades de car√°cter cultural y de ocio, que se van a celebrar en los pr√≥ximos 100 d√≠as y/o que se est√°n celebrando, en centros Municipales . Podr√° encontrar as√≠ las actividades de Centros Culturales, Socioculturales, Centros Juveniles, Bibliotecas, Centros de Mayores, Museos, Juntas de Distrito, etc. En este Portal, existen otros conjuntos de datos donde puede ver la relaci√≥n de los diversos centros anteriores. Tenga en cuenta que hay ciertas actividades que aunque son gratuitas , requieren inscripci√≥n previa. En el campo 'CONTENT-URL', esta la url donde puede obtener informaci√≥n adicional de la actividad y donde se especifica si se requiere inscripci√≥n y como realizarla . Hay otras actividades, que si tienen un coste asociado, igualmente tiene la informaci√≥n en la url anterior. En el apartado 'Documentaci√≥n asociada', hay un documento con la estructura del fichero y las recomendaciones y/o advertencias, que le permitir√° usar y comprender mejor los datos.</description>
+				<title>Actividades Culturales y de Ocio Municipal en los prÛximos 100 dÌas</title>
+				<description>RelaciÛn de actividades de car·cter cultural y de ocio, que se van a celebrar en los prÛximos 100 dÌas y/o que se est·n celebrando, en centros Municipales . Podr· encontrar asÌ las actividades de Centros Culturales, Socioculturales, Centros Juveniles, Bibliotecas, Centros de Mayores, Museos, Juntas de Distrito, etc. En este Portal, existen otros conjuntos de datos donde puede ver la relaciÛn de los diversos centros anteriores. Tenga en cuenta que hay ciertas actividades que aunque son gratuitas , requieren inscripciÛn previa. En el campo 'CONTENT-URL', esta la url donde puede obtener informaciÛn adicional de la actividad y donde se especifica si se requiere inscripciÛn y como realizarla . Hay otras actividades, que si tienen un coste asociado, igualmente tiene la informaciÛn en la url anterior. En el apartado 'DocumentaciÛn asociada', hay un documento con la estructura del fichero y las recomendaciones y/o advertencias, que le permitir· usar y comprender mejor los datos.</description>
 				<theme>http://datos.gob.es/kos/sector-publico/sector/cultura-ocio</theme>
 			</dataset>
 			<dataset id="https://datos.madrid.es/egob/catalogo/300107-0-agenda-actividades-eventos.json">
 				<title>Agenda de actividades y eventos</title>
-				<description>Relaci√≥n de actividades de distinto tipo que se van a celebrar o que se est√°n celebrando, en centros municipales o asociados la actividad gestionada por el Ayuntamiento. Podr√° encontrar as√≠ las actividades de Centros Culturales, Socioculturales, Centros Juveniles, Bibliotecas, Centros de Mayores, Museos, Juntas de Distrito, etc. En la columna P del fichero descargable, puede ver en que centro se realiza dicha actividad (puede ser en centros del ayuntamiento o no) No se trata de una relaci√≥n exhaustiva de toda la actividad del Ayuntamiento de Madrid, sino solamente de aquellos que ya se encuentran incluidos en la p√°gina web www.madrid.es . Asi mismo pueden existir eventos, que por motivos de tem√°tica, pueden incluso estar duplicados. En este Portal, existen otros conjuntos de datos donde puede ver la relaci√≥n de los diversos centros anteriores. Tenga en cuenta que hay ciertas actividades que aunque son gratuitas , requieren inscripci√≥n previa. En el campo 'CONTENT-URL', esta la url donde puede obtener informaci√≥n adicional de la actividad y donde se especifica si se requiere inscripci√≥n y como realizarla . Hay otras actividades, que si tienen un coste asociado, igualmente tiene la informaci√≥n en la url anterior. En la p√°gina siguiente tiene un buscador para poder encontrar una actividad en particular. En el apartado 'Documentaci√≥n asociada', hay un documento con la estructura del fichero y las recomendaciones y/o advertencias, que le permitir√° usar y comprender mejor los datos.</description>
+				<description>RelaciÛn de actividades de distinto tipo que se van a celebrar o que se est·n celebrando, en centros municipales o asociados la actividad gestionada por el Ayuntamiento. Podr· encontrar asÌ las actividades de Centros Culturales, Socioculturales, Centros Juveniles, Bibliotecas, Centros de Mayores, Museos, Juntas de Distrito, etc. En la columna P del fichero descargable, puede ver en que centro se realiza dicha actividad (puede ser en centros del ayuntamiento o no) No se trata de una relaciÛn exhaustiva de toda la actividad del Ayuntamiento de Madrid, sino solamente de aquellos que ya se encuentran incluidos en la p·gina web www.madrid.es . Asi mismo pueden existir eventos, que por motivos de tem·tica, pueden incluso estar duplicados. En este Portal, existen otros conjuntos de datos donde puede ver la relaciÛn de los diversos centros anteriores. Tenga en cuenta que hay ciertas actividades que aunque son gratuitas , requieren inscripciÛn previa. En el campo 'CONTENT-URL', esta la url donde puede obtener informaciÛn adicional de la actividad y donde se especifica si se requiere inscripciÛn y como realizarla . Hay otras actividades, que si tienen un coste asociado, igualmente tiene la informaciÛn en la url anterior. En la p·gina siguiente tiene un buscador para poder encontrar una actividad en particular. En el apartado 'DocumentaciÛn asociada', hay un documento con la estructura del fichero y las recomendaciones y/o advertencias, que le permitir· usar y comprender mejor los datos.</description>
 				<theme>http://datos.gob.es/kos/sector-publico/sector/cultura-ocio</theme>
 			</dataset>
 		</datasets>
@@ -38,7 +38,7 @@
 						<address>
 								<area>https://datos.madrid.es/egob/kos/Provincia/Madrid/Municipio/Madrid/Distrito/SanBlas-Canillejas/Barrio/Arcos</area>
 								<locality>MADRID</locality>
-								<street>CALLE SAN ROM√ÅN DEL VALLE 8</street>
+								<street>CALLE SAN ROM¡N DEL VALLE 8</street>
 						</address>
 						<timetable>
 							<start>2022-10-29 00:00:00.0</start>
@@ -68,9 +68,9 @@
 			<resource id="https://datos.madrid.es/egob/catalogo/206974-0-agenda-eventos-culturales-100.json">
 			<concept id="https://datos.madrid.es/egob/kos/actividades/DanzaBaile/FolcloreEtnica"/>
 				<link> <![CDATA[http://www.madrid.es/sites/v/index.jsp?vgnextchannel=ca9671ee4a9eb410VgnVCM100000171f5a0aRCRD&vgnextoid=0b0bdae959397810VgnVCM2000001f4a900aRCRD]]> </link>
-				<title>Asociaci√≥n Cultural Chilena Cal y Canto</title>
+				<title>AsociaciÛn Cultural Chilena Cal y Canto</title>
 				<location>
-						<eventLocation>Auditorio y sala de exposiciones Paco de Luc√≠a (Latina)</eventLocation>
+						<eventLocation>Auditorio y sala de exposiciones Paco de LucÌa (Latina)</eventLocation>
 						<address>
 								<area>https://datos.madrid.es/egob/kos/Provincia/Madrid/Municipio/Madrid/Distrito/Latina/Barrio/LasAguilas</area>
 								<locality>MADRID</locality>
@@ -82,7 +82,7 @@
 						</timetable>
 						<georeference>40.38493929920335 -3.7641963952601154</georeference>
 				</location>
-				<description>En su vig√©simoquinto aniversario, presenta un encuentro de danzas tradicionales junto a organizaciones amigas de distintos pa√≠ses para difundir la m√∫sica y la cultura.</description>
+				<description>En su vigÈsimoquinto aniversario, presenta un encuentro de danzas tradicionales junto a organizaciones amigas de distintos paÌses para difundir la m˙sica y la cultura.</description>
 			</resource>
 			<resource id="https://datos.madrid.es/egob/catalogo/206974-0-agenda-eventos-culturales-100.json">
 			<concept id="https://datos.madrid.es/egob/kos/actividades/DanzaBaile"/>
@@ -107,7 +107,7 @@
 				<link> <![CDATA[http://www.madrid.es/sites/v/index.jsp?vgnextchannel=ca9671ee4a9eb410VgnVCM100000171f5a0aRCRD&vgnextoid=9c23ab8023633810VgnVCM2000001f4a900aRCRD]]> </link>
 				<title>Bailar, recordar, resistir</title>
 				<location>
-						<eventLocation>Centro de Cultura Contempor√°nea Conde Duque</eventLocation>
+						<eventLocation>Centro de Cultura Contempor·nea Conde Duque</eventLocation>
 						<address>
 								<area>https://datos.madrid.es/egob/kos/Provincia/Madrid/Municipio/Madrid/Distrito/Centro/Barrio/Universidad</area>
 								<locality>MADRID</locality>
@@ -123,9 +123,9 @@
 			<resource id="https://datos.madrid.es/egob/catalogo/300107-0-agenda-actividades-eventos.json">
 			<concept id="https://datos.madrid.es/egob/kos/actividades/DanzaBaile"/>
 				<link> <![CDATA[http://www.madrid.es/sites/v/index.jsp?vgnextchannel=ca9671ee4a9eb410VgnVCM100000171f5a0aRCRD&vgnextoid=614bade4847a6810VgnVCM1000001d4a900aRCRD]]> </link>
-				<title>Alegr√≠a de Cirque du Soleil (Circo del Sol)</title>
+				<title>AlegrÌa de Cirque du Soleil (Circo del Sol)</title>
 				<location>
-						<eventLocation>Escenario Puerta del √Ångel</eventLocation>
+						<eventLocation>Escenario Puerta del ¡ngel</eventLocation>
 						<address>
 								<area>https://datos.madrid.es/egob/kos/Provincia/Madrid/Municipio/Madrid/Distrito/Moncloa-Aravaca/Barrio/CasaCampo</area>
 								<locality>MADRID</locality>
@@ -147,7 +147,7 @@
 						<address>
 								<area>https://datos.madrid.es/egob/kos/Provincia/Madrid/Municipio/Madrid/Distrito/SanBlas-Canillejas/Barrio/Arcos</area>
 								<locality>MADRID</locality>
-								<street>CALLE SAN ROM√ÅN DEL VALLE 8</street>
+								<street>CALLE SAN ROM¡N DEL VALLE 8</street>
 						</address>
 						<timetable>
 							<start>2022-10-29 00:00:00.0</start>
@@ -177,9 +177,9 @@
 			<resource id="https://datos.madrid.es/egob/catalogo/300107-0-agenda-actividades-eventos.json">
 			<concept id="https://datos.madrid.es/egob/kos/actividades/DanzaBaile/FolcloreEtnica"/>
 				<link> <![CDATA[http://www.madrid.es/sites/v/index.jsp?vgnextchannel=ca9671ee4a9eb410VgnVCM100000171f5a0aRCRD&vgnextoid=0b0bdae959397810VgnVCM2000001f4a900aRCRD]]> </link>
-				<title>Asociaci√≥n Cultural Chilena Cal y Canto</title>
+				<title>AsociaciÛn Cultural Chilena Cal y Canto</title>
 				<location>
-						<eventLocation>Auditorio y sala de exposiciones Paco de Luc√≠a (Latina)</eventLocation>
+						<eventLocation>Auditorio y sala de exposiciones Paco de LucÌa (Latina)</eventLocation>
 						<address>
 								<area>https://datos.madrid.es/egob/kos/Provincia/Madrid/Municipio/Madrid/Distrito/Latina/Barrio/LasAguilas</area>
 								<locality>MADRID</locality>
@@ -191,7 +191,7 @@
 						</timetable>
 						<georeference>40.38493929920335 -3.7641963952601154</georeference>
 				</location>
-				<description>En su vig√©simoquinto aniversario, presenta un encuentro de danzas tradicionales junto a organizaciones amigas de distintos pa√≠ses para difundir la m√∫sica y la cultura.</description>
+				<description>En su vigÈsimoquinto aniversario, presenta un encuentro de danzas tradicionales junto a organizaciones amigas de distintos paÌses para difundir la m˙sica y la cultura.</description>
 			</resource>
 			<resource id="https://datos.madrid.es/egob/catalogo/300107-0-agenda-actividades-eventos.json">
 			<concept id="https://datos.madrid.es/egob/kos/actividades/DanzaBaile"/>

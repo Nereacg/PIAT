@@ -1,0 +1,23 @@
+{
+	// Use IntelliSense to learn about possible attributes.
+	// Hover to view descriptions of existing attributes.
+	// For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
+	"version": "0.2.0",
+	"configurations": [
+		{
+			"type": "java",
+			"name": "P5_XPATH",
+			"request": "launch",
+			"mainClass": "piat.opendatasearch.P5_XPATH",
+			"projectName": "PIAT_Pr55",
+			"args": [
+				"0016-018",
+				"PIAP5/src/catalogo/catalogo.xml",
+				"PIAP5/ResultadosBusquedaP4.xsd",
+				"PIAP5/salidaP4.xml",
+				"PIAP5/salidaP5.json"
+			]
+		}
+	]
+}
+
