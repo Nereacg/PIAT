@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+            targetNamespace="http://www.piat.dte.upm.es/examenJunio"
+            xmlns:tns="http://www.piat.dte.upm.es/examenJunio"
+            elementFormDefault="qualified">
+    <xsd:element name="graphs">
+        <xsd:complexType>
+            <xsd:sequence>
+                <xsd:element name="graph" type="tns:tipoGraph" minOccurs="0" maxOccurs="unbounded"/>
+            </xsd:sequence>
+        </xsd:complexType>       
+    </xsd:element>
+
+    <xsd:complexType name="tipoGraph">
+        <xsd:sequence>
+            <xsd:element name="tipoPostalCode" type="xsd:string" minOccurs="0">
+                <xsd:annotation>
+                    <xsd:documentation>
+                        Valor del nombre "postal-code" del objeto "@context"
+                        En caso de que no exista dicho valor, no aparecerá este elemento.
+                    </xsd:documentation>
+                </xsd:annotation>
+            </xsd:element>
+            <xsd:element name="postalCode" type="xsd:string" minOccurs="0">
+                <xsd:annotation>
+                    <xsd:documentation>
+                        valor del nombre "postal-code" del objeto "address" descendiente del objeto "@graph".
+                        En caso de que no exista dicho valor, no aparecerá este elemento.
+                    </xsd:documentation>
+                </xsd:annotation>
+            </xsd:element>
+        </xsd:sequence>
+        <xsd:attribute name="id" type="xsd:anyURI"/>
+    </xsd:complexType>
+</xsd:schema>

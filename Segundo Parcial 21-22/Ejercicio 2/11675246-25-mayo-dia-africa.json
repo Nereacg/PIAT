@@ -1,0 +1,92 @@
+{
+    "@context": {
+        "c": "http://www.w3.org/2002/12/cal#",
+        "dcterms": "http://purl.org/dc/terms/",
+        "geo": "http://www.w3.org/2003/01/geo/wgs84_pos#",
+        "loc": "http://purl.org/ctic/infraestructuras/localizacion#",
+        "org": "http://purl.org/ctic/infraestructuras/organizacion#",
+        "vcard": "http://www.w3.org/2006/vcard/ns#",
+        "schema": "https://schema.org/",
+        "title": "vcard:fn",
+        "id": "dcterms:identifier",
+        "relation": "dcterms:relation",
+        "references": "dcterms:references",
+        "address": "vcard:adr",
+        "area": "loc:barrio",
+        "district": "loc:distrito",
+        "locality": "vcard:locality",
+        "postal-code": "vcard:postal-code",
+        "street-address": "vcard:street-address",
+        "location": "vcard:geo",
+        "latitude": "geo:lat",
+        "longitude": "geo:long",
+        "organization": "vcard:org",
+        "organization-desc": "dcterms:description",
+        "accesibility": "org:accesibilidad",
+        "services": "org:servicios",
+        "schedule": "org:horario",
+        "organization-name": "vcard:organization-name",
+        "description": "c:summary",
+        "link": "c:url",
+        "uid": "c:uid",
+        "dtstart": "c:dtstart",
+        "dtend": "c:dtend",
+        "time": "c:time",
+        "excluded-days": "c:exdate",
+        "event-location": "c:location",
+        "free": "schema:free",
+        "price": "c:resource",
+        "recurrence": "c:rrule",
+        "days": "c:byday",
+        "frequency": "c:freq",
+        "interval": "c:interval",
+        "audience": "dc:audience"
+    },
+    "@graph": [{
+        "@id": "https://datos.madrid.es/egob/catalogo/tipo/evento/11675246-25-mayo-dia-africa.json",
+        "@type": "https://datos.madrid.es/egob/kos/actividades/CuentacuentosTiteresMarionetas",
+        "id": "11675246",
+        "title": "25 de Mayo, Día de África",
+        "description": "",
+        "free": "1",
+        "price": "",
+        "dtstart": "2022-05-25 18:00:00.0",
+        "dtend": "2022-05-25 23:59:00.0",
+        "time": "18:00",
+        "excluded-days": "",
+        "recurrence": {
+            "days": "",
+            "frequency": "WEEKLY",
+            "interval": 1
+        },
+        "uid": "11675246",
+        "audience": "Niños",
+        "references": {
+            "@id": "CONTENT-URL-ACTIVIDAD"
+        },
+        "event-location": "Biblioteca Pública Municipal Iván de Vargas (Centro)",
+        "relation": {
+            "@id": "https://datos.madrid.es/egob/catalogo/tipo/entidadesyorganismos/5975465-biblioteca-publica-municipal-ivan-vargas-centro-.json"
+        },
+        "address": {
+            "district": {
+                "@id": "https://datos.madrid.es/egob/kos/Provincia/Madrid/Municipio/Madrid/Distrito/Centro"
+            },
+            "area": {
+                "@id": "https://datos.madrid.es/egob/kos/Provincia/Madrid/Municipio/Madrid/Distrito/Centro/Barrio/Palacio"
+            },
+            "locality": "MADRID",
+            "postal-code": "28005",
+            "street-address": "CALLE SAN JUSTO 5"
+        },
+        "location": {
+            "latitude": 40.41410290844665,
+            "longitude": -3.7098591212735883
+        },
+        "organization": {
+            "organization-name": "Biblioteca Pública Municipal Iván de Vargas (Centro)",
+            "accesibility": "1,6"
+        },
+        "link": "http://www.madrid.es/sites/v/index.jsp?vgnextchannel=ca9671ee4a9eb410VgnVCM100000171f5a0aRCRD&vgnextoid=62578f084ad80810VgnVCM2000001f4a900aRCRD"
+    }]
+}

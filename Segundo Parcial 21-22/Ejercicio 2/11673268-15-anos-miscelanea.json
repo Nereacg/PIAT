@@ -1,0 +1,91 @@
+{
+    "@context": {
+        "c": "http://www.w3.org/2002/12/cal#",
+        "dcterms": "http://purl.org/dc/terms/",
+        "geo": "http://www.w3.org/2003/01/geo/wgs84_pos#",
+        "loc": "http://purl.org/ctic/infraestructuras/localizacion#",
+        "org": "http://purl.org/ctic/infraestructuras/organizacion#",
+        "vcard": "http://www.w3.org/2006/vcard/ns#",
+        "schema": "https://schema.org/",
+        "title": "vcard:fn",
+        "id": "dcterms:identifier",
+        "relation": "dcterms:relation",
+        "references": "dcterms:references",
+        "address": "vcard:adr",
+        "area": "loc:barrio",
+        "district": "loc:distrito",
+        "locality": "vcard:locality",
+        "postal-code": "vcard:postal-code",
+        "street-address": "vcard:street-address",
+        "location": "vcard:geo",
+        "latitude": "geo:lat",
+        "longitude": "geo:long",
+        "organization": "vcard:org",
+        "organization-desc": "dcterms:description",
+        "accesibility": "org:accesibilidad",
+        "services": "org:servicios",
+        "schedule": "org:horario",
+        "organization-name": "vcard:organization-name",
+        "description": "c:summary",
+        "link": "c:url",
+        "uid": "c:uid",
+        "dtstart": "c:dtstart",
+        "dtend": "c:dtend",
+        "time": "c:time",
+        "excluded-days": "c:exdate",
+        "event-location": "c:location",
+        "free": "schema:free",
+        "price": "c:resource",
+        "recurrence": "c:rrule",
+        "days": "c:byday",
+        "frequency": "c:freq",
+        "interval": "c:interval",
+        "audience": "dc:audience"
+    },
+    "@graph": [{
+        "@id": "https://datos.madrid.es/egob/catalogo/tipo/evento/11673268-15-anos-miscelenea.json",
+        "@type": "https://datos.madrid.es/egob/kos/actividades/TeatroPerformance",
+        "id": "11673268",
+        "title": "15 años con Miscelénea",
+        "description": "Las amigas de  Miscelánea  celebran con nosotros su amplia trayectoria, compartiendo su saber hacer y su exquisita sensibilidad en el escenario del Centro Cultural Fernando de los Ríos.",
+        "free": "1",
+        "price": "",
+        "dtstart": "2022-05-27 19:00:00.0",
+        "dtend": "2022-05-27 23:59:00.0",
+        "time": "19:00",
+        "excluded-days": "",
+        "recurrence": {
+            "days": "",
+            "frequency": "WEEKLY",
+            "interval": 1
+        },
+        "uid": "11673268",
+        "references": {
+            "@id": "CONTENT-URL-ACTIVIDAD"
+        },
+        "event-location": "Centro Cultural Fernando de los Ríos (Latina)",
+        "relation": {
+            "@id": "https://datos.madrid.es/egob/catalogo/tipo/entidadesyorganismos/1954-centro-cultural-fernando-rios-latina-.json"
+        },
+        "address": {
+            "district": {
+                "@id": "https://datos.madrid.es/egob/kos/Provincia/Madrid/Municipio/Madrid/Distrito/Latina"
+            },
+            "area": {
+                "@id": "https://datos.madrid.es/egob/kos/Provincia/Madrid/Municipio/Madrid/Distrito/Latina/Barrio/Aluche"
+            },
+            "locality": "MADRID",
+            "postal-code": "28047",
+            "street-address": "CALLE CAMARENA 10"
+        },
+        "location": {
+            "latitude": 40.39552931214334,
+            "longitude": -3.7562667464373223
+        },
+        "organization": {
+            "organization-name": "Centro Cultural Fernando de los Ríos (Latina)",
+            "accesibility": "1"
+        },
+        "link": "http://www.madrid.es/sites/v/index.jsp?vgnextchannel=ca9671ee4a9eb410VgnVCM100000171f5a0aRCRD&vgnextoid=26c7e95862570810VgnVCM1000001d4a900aRCRD"
+    }]
+}

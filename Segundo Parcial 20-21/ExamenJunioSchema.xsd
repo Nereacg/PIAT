@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema" 
+			targetNamespace="http://www.piat.dte.upm.es/ExamenJunio" 
+			xmlns:tns="http://www.piat.dte.upm.es/ExamenJunio" 
+			elementFormDefault="qualified">
+			
+	<xsd:element name="results">
+		<xsd:complexType>
+			<xsd:sequence>
+				<xsd:element name="datasets" type="tns:tipoDatasets"/>
+				<xsd:element name="resources" type="tns:tipoResources"/>
+			</xsd:sequence>
+		</xsd:complexType>
+	</xsd:element>
+	
+	<xsd:complexType name="tipoDatasets">
+		<xsd:sequence>
+			<xsd:element name="dataset" type="xsd:anyURI" minOccurs="0" maxOccurs="unbounded">
+				<xsd:annotation>
+					<xsd:documentation>
+						Valor de la propiedad 'id' (que contiene una url terminada en .xml) de los objetos del array 'concepts' que son pertinentes
+					</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+		</xsd:sequence>
+	</xsd:complexType>
+	
+	<xsd:complexType name="tipoResources">
+		<xsd:sequence>
+			<xsd:element name="resource" type="tns:tipoResource" minOccurs="0" maxOccurs="unbounded"/>
+		</xsd:sequence>
+	</xsd:complexType>
+	
+	<xsd:complexType name="tipoResource">
+		<xsd:sequence>
+			<xsd:element name="title" type="xsd:string">
+				<xsd:annotation>
+					<xsd:documentation>
+						Valor de la propiedad 'title' de los objetos del array 'datasets' que son pertinentes
+					</xsd:documentation>
+				</xsd:annotation>
+			 </xsd:element>
+			<xsd:element name="publisher" type="xsd:anyURI">
+				<xsd:annotation>
+					<xsd:documentation>
+						Valor de la propiedad 'publisher' de los objetos del array 'datasets' que son pertinentes
+					</xsd:documentation>
+				</xsd:annotation>			
+			</xsd:element>			
+		</xsd:sequence>
+		<xsd:attribute name="datasetOrigen" type="xsd:anyURI">
+			<xsd:annotation>
+				<xsd:documentation>
+					Valor de la propiedad 'id' del dataset en el cual está incluido este 'resource'
+				</xsd:documentation>
+			</xsd:annotation>
+		</xsd:attribute>
+	</xsd:complexType>
+</xsd:schema>

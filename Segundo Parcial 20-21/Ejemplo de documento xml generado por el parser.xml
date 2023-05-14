@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<results xmlns="http://www.piat.dte.upm.es/ExamenJunio"
+ xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+ xsi:schemaLocation="http://www.piat.dte.upm.es/ExamenJunioSchema ExamenJunioSchema.xsd">
+
+		<datasets>
+			<dataset>https://datos.madrid.es/egob/catalogo/209094-0-centros-servicios-sociales.xml</dataset>
+			<dataset>https://datos.madrid.es/egob/catalogo/212769-0-atencion-medica.xml</dataset>
+			<dataset>https://datos.madrid.es/egob/catalogo/205736-0-atencion-mujeres.xml</dataset>
+			<dataset>https://datos.madrid.es/egob/catalogo/212774-0-atencion-social.xml</dataset>
+		</datasets>
+		<resources>
+			<resource datasetOrigen="https://datos.madrid.es/egob/catalogo/209094-0-centros-servicios-sociales.xml">
+				<title>Centros de Servicios Sociales Municipales</title>
+				<publisher>http://datos.gob.es/recurso/sector-publico/org/Organismo/L01280796</publisher>
+			</resource>
+			<resource datasetOrigen="https://datos.madrid.es/egob/catalogo/212769-0-atencion-medica.xml">
+				<title>Sedes. Centros de Atención Médica</title>
+				<publisher>http://datos.gob.es/recurso/sector-publico/org/Organismo/A13002908</publisher>
+			</resource>
+			<resource datasetOrigen="https://datos.madrid.es/egob/catalogo/205736-0-atencion-mujeres.xml">
+				<title>Puntos de atención a mujeres</title>
+				<publisher>http://datos.gob.es/recurso/sector-publico/org/Organismo/L01280796</publisher>
+			</resource>
+			<resource datasetOrigen="https://datos.madrid.es/egob/catalogo/212774-0-atencion-social.xml">
+				<title>Sedes. Centros de Atención Social</title>
+				<publisher>http://datos.gob.es/recurso/sector-publico/org/Organismo/A13002908</publisher>
+			</resource>
+		</resources>
+	</results>

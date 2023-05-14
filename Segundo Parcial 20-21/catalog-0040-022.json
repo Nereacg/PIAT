@@ -1,0 +1,226 @@
+{
+    "summary": {
+        "query": "0040-022",
+        "concepts": 8,
+        "datasets": 10
+    },
+    "concepts": [{
+            "id": "https://datos.madrid.es/egob/kos/entidadesYorganismos/CentrosAtencionSocial/CentrosRehabilitacionPsicosocial",
+            "properties": {
+                "code": "0003-0040FL22",
+                "label": "Centros de rehabilitación psicosocial"
+            }
+        },
+        {
+            "id": "https://datos.madrid.es/egob/kos/entidadesYorganismos/CentrosAtencionSocial",
+            "properties": {
+                "code": "0040-022",
+                "label": "Centros de atención social"
+            }
+        },
+        {
+            "id": "https://datos.madrid.es/egob/kos/entidadesYorganismos/CentrosAtencionSocial/CentrosServiciosApoyoSociolaboral",
+            "properties": {
+                "code": "0004-0040FL22",
+                "label": "Centros y servicios de apoyo sociolaboral"
+            }
+        },
+        {
+            "id": "https://datos.madrid.es/egob/kos/entidadesYorganismos/CentrosAtencionSocial/CentrosOrientacionValoracion",
+            "properties": {
+                "code": "0002-0040FL22",
+                "label": "Centros de orientación y valoración"
+            }
+        },
+        {
+            "id": "https://datos.madrid.es/egob/kos/entidadesYorganismos/CentrosAtencionSocial/ComedoresSociales",
+            "properties": {
+                "code": "0006-0040FL22",
+                "label": "Comedores sociales"
+            }
+        },
+        {
+            "id": "https://datos.madrid.es/egob/kos/entidadesYorganismos/CentrosAtencionSocial/ServicionAtencionSocialDomicilioEmpresas",
+            "properties": {
+                "code": "0007-0040FL22",
+                "label": "Servicios de atención social a domicilio (empresas)"
+            }
+        },
+        {
+            "id": "https://datos.madrid.es/egob/kos/entidadesYorganismos/CentrosAtencionSocial/CentrosServiciosSociales",
+            "properties": {
+                "code": "0005-0040FL22",
+                "label": "Centros de servicios sociales"
+            }
+        },
+        {
+            "id": "https://datos.madrid.es/egob/kos/entidadesYorganismos/CentrosAtencionSocial/AlberguesSocialesCentrosAcogida",
+            "properties": {
+                "code": "0001-0040FL22",
+                "label": "Albergues sociales y centros de acogida"
+            }
+        }
+    ],
+    "datasets": [{
+            "id": "https://datos.madrid.es/egob/catalogo/209094-0-centros-servicios-sociales.xml",
+            "title": "Centros de Servicios Sociales Municipales",
+            "properties": {
+                "description": "Listado de Centros de Servicios Sociales Municipales, donde se ofrecen los siguientes servicios: Información, orientación y asesoramiento sobre derechos y recursos sociales Tramitación y gestión de servicios sociales municipales (ayudas a domicilio, teleasistencia, centros de día municipales, pisos tutelados, etc. ) y prestaciones económicas necesarias en la intervención social. Gestión y tramitación de servicios y prestaciones de la Comunidad de Madrid (Dependencia, residencias de mayores, discapacitados, mujer, menores, etc. ) Renta Mínima de Inserción (RMI) y diferentes prestaciones económicas de inserción social. Información y gestión de los programas de prevención dirigidos a menores, adolescentes, adultos, mayores, etc.",
+                "publisher": "http://datos.gob.es/recurso/sector-publico/org/Organismo/L01280796",
+                "theme": "http://datos.gob.es/kos/sector-publico/sector/sociedad-bienestar",
+                "concepts": [
+                    { "concept": "https://datos.madrid.es/egob/kos/entidadesYorganismos/CentrosAtencionSocial/CentrosServiciosSociales" },
+                    { "concept": "https://datos.madrid.es/egob/kos/entidadesYorganismos/CentrosAtencionSocial" }
+                ]
+            }
+        },
+        {
+            "id": "https://datos.madrid.es/egob/catalogo/201544-0-centros-salud.xml",
+            "title": "Madrid Salud. Relación de centros municipales",
+            "properties": {
+                "description": "Centros de Salud Municipales Centros de Atención a Drogodependencias Centros especializados Centros monográficos Datos de ubicación, transporte, contacto, horario y servicios. Referencias a Barrios y Distritos de ubicación del centro y su área de influencia de servicios.",
+                "publisher": "http://datos.gob.es/recurso/sector-publico/org/Organismo/A13002908",
+                "theme": "http://datos.gob.es/kos/sector-publico/sector/salud",
+                "concepts": [
+                    { "concept": "https://datos.madrid.es/egob/kos/entidadesYorganismos/CentrosAtencionMedica/CentrosAsistenciaDrogodependientes" },
+                    { "concept": "https://datos.madrid.es/egob/kos/entidadesYorganismos/AyuntamientoMadrid/OrganismosEmpresasMunicipales" },
+                    { "concept": "https://datos.madrid.es/egob/kos/entidadesYorganismos/CentrosAtencionMedica/CentrosPrevencionEnfermedades" },
+                    { "concept": "https://datos.madrid.es/egob/kos/entidadesYorganismos/CentrosAtencionSocial/CentrosRehabilitacionPsicosocial" },
+                    { "concept": "https://datos.madrid.es/egob/kos/entidadesYorganismos/AyuntamientoMadrid/OtrasEntidadesAdministrativasAyto" },
+                    { "concept": "https://datos.madrid.es/egob/kos/entidadesYorganismos/ResidenciasAnimales" }
+                ]
+            }
+        },
+        {
+            "id": "https://datos.madrid.es/egob/catalogo/205732-0-centros-sin-hogar.xml",
+            "title": "Centros para personas sin hogar",
+            "properties": {
+                "description": "Centros de atención social para personas sin hogar: Albergues sociales y centros de acogida de titularidad municipal o con los que el Ayuntamiento de Madrid tiene suscrito convenio de colaboración. En el apartado \u0027Documentación asociada\u0027 tiene un documento explicativo.",
+                "publisher": "http://datos.gob.es/recurso/sector-publico/org/Organismo/L01280796",
+                "theme": "http://datos.gob.es/kos/sector-publico/sector/sociedad-bienestar",
+                "concepts": [
+                    { "concept": "https://datos.madrid.es/egob/kos/entidadesYorganismos/CentrosAtencionSocial/AlberguesSocialesCentrosAcogida" }
+                ]
+            }
+        },
+        {
+            "id": "https://datos.madrid.es/egob/catalogo/212769-0-atencion-medica.xml",
+            "title": "Sedes. Centros de Atención Médica",
+            "properties": {
+                "description": "Relación de centros de atención médica en la ciudad de Madrid: Clínicas, Sanatorios y Hospitales públicos y privados Centros de salud: atención primaria y de especialidades Centros municipales de salud Centros muncipales de atención a drogodependientes Centros de prevención de riesgos laborales Centros de vacunación Centros para conductores Otros centros Importante: La información proporcionada puede no ser exhaustiva, es la disponible actualmente en madrid.es.",
+                "publisher": "http://datos.gob.es/recurso/sector-publico/org/Organismo/A13002908",
+                "theme": "http://datos.gob.es/kos/sector-publico/sector/sociedad-bienestar",
+                "concepts": [
+                    { "concept": "https://datos.madrid.es/egob/kos/entidadesYorganismos/CentrosAtencionMedica/CentrosAsistenciaDrogodependientes" },
+                    { "concept": "https://datos.madrid.es/egob/kos/entidadesYorganismos/CentrosAtencionMedica/OtrosCentrosMedicos" },
+                    { "concept": "https://datos.madrid.es/egob/kos/entidadesYorganismos/CentrosAtencionMedica/CentrosEspecialidadesMedicas" },
+                    { "concept": "https://datos.madrid.es/egob/kos/entidadesYorganismos/CentrosAtencionMedica/CentrosSalud" },
+                    { "concept": "https://datos.madrid.es/egob/kos/entidadesYorganismos/CentrosAtencionSocial" },
+                    { "concept": "https://datos.madrid.es/egob/kos/entidadesYorganismos/CentrosAtencionSocial/CentrosRehabilitacionPsicosocial" },
+                    { "concept": "https://datos.madrid.es/egob/kos/entidadesYorganismos/CentrosAtencionMedica/CentrosPrevencionEnfermedades" }
+                ]
+            }
+        },
+        {
+            "id": "https://datos.madrid.es/egob/catalogo/202162-0-instalaciones-accesibles-municip.xml",
+            "title": "Instalaciones accesibles municipales",
+            "properties": {
+                "description": "Instalaciones accesibles municipales.",
+                "publisher": "http://datos.gob.es/recurso/sector-publico/org/Organismo/L01280796",
+                "theme": "http://datos.gob.es/kos/sector-publico/sector/sociedad-bienestar",
+                "concepts": [
+                    { "concept": "https://datos.madrid.es/egob/kos/entidadesYorganismos/AyuntamientoMadrid/AreasGobierno" },
+                    { "concept": "https://datos.madrid.es/egob/kos/entidadesYorganismos/AyuntamientoMadrid/OrganismosEmpresasMunicipales" },
+                    { "concept": "https://datos.madrid.es/egob/kos/entidadesYorganismos/OficinasEmpleo" },
+                    { "concept": "https://datos.madrid.es/egob/kos/entidadesYorganismos/AyuntamientoMadrid/GobiernoMunicipalAlcaldeJuntaGobierno" },
+                    { "concept": "https://datos.madrid.es/egob/kos/entidadesYorganismos/ZoosAcuarios" }
+                ]
+            }
+        },
+        {
+            "id": "https://datos.madrid.es/egob/catalogo/200304-0-centros-culturales.xml",
+            "title": "Centros Culturales Municipales (incluyen Socioculturales y Juveniles)",
+            "properties": {
+                "description": "Este conjunto de datos incluye los Centros Culturales , los Socioculturales y los Juveniles del Ayuntamiento de Madrid (incluídos aquellos en los que el Ayuntamiento es miembro del consorcio titular). También están incluidas las Salas de Estudio y Lectura. El fichero contiene los datos de localización (dirección, distrito y barrio), contacto, horario, servicios y actividades tipo que se pueden celebrar. Existe en el portal otro conjunto de datos relacionado como es: Actividades Culturales y de Ocio Municipal en los próximos 100 días , donde se incluyen la programación de actividades culturales que hay en la ciudad, y que incluye las celebradas en Centros Culturales, los Socioculturales, los Juveniles, las Bibliotecas, etc. En el apartado \u0027Documentación asociada\u0027, hay un documento con la estructura del fichero y las recomendaciones sobre el uso de los datos.",
+                "publisher": "http://datos.gob.es/recurso/sector-publico/org/Organismo/L01280796",
+                "theme": "http://datos.gob.es/kos/sector-publico/sector/cultura-ocio",
+                "concepts": [
+                    { "concept": "https://datos.madrid.es/egob/kos/entidadesYorganismos/AuditoriosSalasConcierto" },
+                    { "concept": "https://datos.madrid.es/egob/kos/entidadesYorganismos/CentrosCulturales" },
+                    { "concept": "https://datos.madrid.es/egob/kos/entidadesYorganismos/CentrosAtencionSocial/CentrosServiciosSociales" },
+                    { "concept": "https://datos.madrid.es/egob/kos/entidadesYorganismos/SalasExposiciones" },
+                    { "concept": "https://datos.madrid.es/egob/kos/entidadesYorganismos/Teatros" },
+                    { "concept": "https://datos.madrid.es/egob/kos/entidadesYorganismos/SalasEstudioLectura" },
+                    { "concept": "https://datos.madrid.es/egob/kos/entidadesYorganismos/OficinasInformacionJuvenil" },
+                    { "concept": "https://datos.madrid.es/egob/kos/entidadesYorganismos/MonumentosEdificiosArtisticos" }
+                ]
+            }
+        },
+        {
+            "id": "https://datos.madrid.es/egob/catalogo/212774-0-atencion-social.xml",
+            "title": "Sedes. Centros de Atención Social",
+            "properties": {
+                "description": "Relación de centros de atención social en la ciudad de Madrid. Incluye direcciones, transportes y horarios de atención, tanto públicos como privados. Todos los centros municipales de atención social: Centros de día de mayores, de menores, de Servicios Sociales, de Acogida, de Atención a Inmigrantes, de mayores, de Igualdad, de Atención a la Violencia de Género, de Protección a la Familia, Centros Comunitarios, Agentes de Igualdad, etc. Centros y talleres ocupacionales Centros residenciales y residencias de mayores Pisos tutelados Albergues Federaciones y asociaciones Otras tipologías Importante: La información proporcionada puede no ser exhaustiva, es la disponible actualmente en madrid.es.",
+                "publisher": "http://datos.gob.es/recurso/sector-publico/org/Organismo/A13002908",
+                "theme": "http://datos.gob.es/kos/sector-publico/sector/sociedad-bienestar",
+                "concepts": [
+                    { "concept": "https://datos.madrid.es/egob/kos/entidadesYorganismos/CentrosAtencionSocialPersonasDiscapacidad/CentrosOcupacionalesPersonasDiscapacidad" },
+                    { "concept": "https://datos.madrid.es/egob/kos/entidadesYorganismos/CentrosAtencionSocial/AlberguesSocialesCentrosAcogida" },
+                    { "concept": "https://datos.madrid.es/egob/kos/entidadesYorganismos/CentrosAtencionSocialPersonasDiscapacidad/CentrosDiasPersonasDiscapacidad" },
+                    { "concept": "https://datos.madrid.es/egob/kos/entidadesYorganismos/CentrosAtencionSocialMayores/ResidenciasApartamentosMayores" },
+                    { "concept": "https://datos.madrid.es/egob/kos/entidadesYorganismos/AsociacionesAccionSocial" },
+                    { "concept": "https://datos.madrid.es/egob/kos/entidadesYorganismos/CentrosAtencionSocial" },
+                    { "concept": "https://datos.madrid.es/egob/kos/entidadesYorganismos/FundacionesSociales" }
+                ]
+            }
+        },
+        {
+            "id": "https://datos.madrid.es/egob/catalogo/205736-0-atencion-mujeres.xml",
+            "title": "Puntos de atención a mujeres",
+            "properties": {
+                "description": "Relación de espacios de igualdad y de agentes de igualdad. Atención a violencia de género.",
+                "publisher": "http://datos.gob.es/recurso/sector-publico/org/Organismo/L01280796",
+                "theme": "http://datos.gob.es/kos/sector-publico/sector/sociedad-bienestar",
+                "concepts": [
+                    { "concept": "https://datos.madrid.es/egob/kos/entidadesYorganismos/CentrosAtencionSocial" },
+                    { "concept": "https://datos.madrid.es/egob/kos/entidadesYorganismos/CentrosAtencionSocialMujeres/ViolenciaGenero" }
+                ]
+            }
+        },
+        {
+            "id": "https://datos.madrid.es/egob/catalogo/300048-0-ancianos-residencias-apartamento.xml",
+            "title": "Residencias de ancianos y apartamentos tutelados existentes en la ciudad de Madrid (datos georreferenciados)",
+            "properties": {
+                "description": "Se relacionan tanto los apartamentos tutelados como las residencias de ancianos que figuran publicadas en http://www.madrid.es/ . No se trata de una relación exhaustiva de la totalidad de centros existentes en la ciudad de Madrid. Se ofrece información de servicios, datos de contacto, dirección, información de barrio y distrito y coordenadas para su georreferenciación,. Se incluyen centros municipales y centros privados, incluidos en ellos los que están concertados con la Comunidad de Madrid. Los datos de titularidad no municipal tienen una frecuencia de actualización anual.",
+                "publisher": "http://datos.gob.es/recurso/sector-publico/org/Organismo/L01280796",
+                "theme": "http://datos.gob.es/kos/sector-publico/sector/sociedad-bienestar",
+                "concepts": [
+                    { "concept": "https://datos.madrid.es/egob/kos/entidadesYorganismos/CentrosAtencionSocialMayores/ResidenciasApartamentosMayores" },
+                    { "concept": "https://datos.madrid.es/egob/kos/entidadesYorganismos/CentrosAtencionMedica/HospitalesClinicasSanatorios" },
+                    { "concept": "https://datos.madrid.es/egob/kos/entidadesYorganismos/CentrosAtencionSocial/AlberguesSocialesCentrosAcogida" },
+                    { "concept": "https://datos.madrid.es/egob/kos/entidadesYorganismos/FundacionesSociales" }
+                ]
+            }
+        },
+        {
+            "id": "https://datos.madrid.es/egob/catalogo/216619-0-wifi-municipal.xml",
+            "title": "Instalaciones municipales con zonas wifi gratuitas",
+            "properties": {
+                "description": "Instalaciones municipales donde los madrileños y visitantes de la ciudad pueden acceder a Internet mediante sus propios dispositivos a través de conexión WiFi gratuita. Actualmente existe conexión en las bibliotecas municipales y en otros edificios: Centros Culturales, Centros de Mayores, Oficinas de Atención al Ciudadano, Centros de Servicios Sociales, etc. La conexión a la red WiFi se realiza de forma autenticada, recibiendo el usuario un mensaje SMS gratuito en el móvil que ha de introducir antes de iniciar la navegación. En el apartado Documentación asociada está disponible la información relativa al SSID ( Service Set Identifier ), fecha de puesta en marcha y tipo de instalación. Nota: La cafetería Cibeles, que es una instalación diferenciada de los servicios municipales de CentroCentro, también dispone de conexión Wifi.",
+                "publisher": "http://datos.gob.es/recurso/sector-publico/org/Organismo/L01280796",
+                "theme": "http://datos.gob.es/kos/sector-publico/sector/ciencia-tecnologia",
+                "concepts": [
+                    { "concept": "https://datos.madrid.es/egob/kos/entidadesYorganismos/BibliotecasPublicas" },
+                    { "concept": "https://datos.madrid.es/egob/kos/entidadesYorganismos/OficinasEmpleo" },
+                    { "concept": "https://datos.madrid.es/egob/kos/entidadesYorganismos/CentrosCulturales" },
+                    { "concept": "https://datos.madrid.es/egob/kos/entidadesYorganismos/BibliotecasEspecializadasUniversitarias" },
+                    { "concept": "https://datos.madrid.es/egob/kos/entidadesYorganismos/Museos" },
+                    { "concept": "https://datos.madrid.es/egob/kos/entidadesYorganismos/AyuntamientoMadrid/OficinasMunicipalesRegistro" },
+                    { "concept": "https://datos.madrid.es/egob/kos/entidadesYorganismos/AyuntamientoMadrid/OficinasInformacionAtencionContribuyente" },
+                    { "concept": "https://datos.madrid.es/egob/kos/entidadesYorganismos/AyuntamientoMadrid/OtrasEntidadesAdministrativasAyto" },
+                    { "concept": "https://datos.madrid.es/egob/kos/entidadesYorganismos/ParquesJardines" }
+                ]
+            }
+        }
+    ]
+}
